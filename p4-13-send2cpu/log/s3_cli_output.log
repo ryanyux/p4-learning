@@ -1,0 +1,7 @@
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: Setting default action of ipv4_lpm
+action:              to_cpu
+runtime data:        00:03
+RuntimeCmd: 
