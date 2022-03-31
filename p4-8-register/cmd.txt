@@ -1,0 +1,4 @@
+set_queue_depth 50
+set_queue_rate 1000
+table_add ipv4_lpm set_nhop 10.1.1.2/32 => 00:00:0a:01:01:02 1
+table_add ipv4_lpm set_nhop 10.1.2.2/32 => 00:00:0a:01:02:02 2

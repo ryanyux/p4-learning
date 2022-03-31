@@ -1,0 +1,1015 @@
+Calling target program-options parser
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'ingress.ipv4_lpm': _drop - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus179': srcRoutePlus179 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_AddHeader': ingress.AddHeader - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus184': srcRoutePlus184 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus186': srcRoutePlus186 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus192': srcRoutePlus192 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_AddHeader_0': ingress.AddHeader - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus195': srcRoutePlus195 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus197': srcRoutePlus197 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus203': srcRoutePlus203 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_AddHeader_1': ingress.AddHeader - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus206': srcRoutePlus206 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus208': srcRoutePlus208 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus214': srcRoutePlus214 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_AddHeader_2': ingress.AddHeader - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus217': srcRoutePlus217 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus219': srcRoutePlus219 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus225': srcRoutePlus225 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_AddHeader_3': ingress.AddHeader - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus228': srcRoutePlus228 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus230': srcRoutePlus230 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus236': srcRoutePlus236 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_AddHeader_4': ingress.AddHeader - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus239': srcRoutePlus239 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus241': srcRoutePlus241 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus247': srcRoutePlus247 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_AddHeader_5': ingress.AddHeader - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus250': srcRoutePlus250 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus252': srcRoutePlus252 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus258': srcRoutePlus258 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_AddHeader_6': ingress.AddHeader - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus261': srcRoutePlus261 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus263': srcRoutePlus263 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus269': srcRoutePlus269 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_AddHeader_7': ingress.AddHeader - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus272': srcRoutePlus272 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoutePlus274': srcRoutePlus274 - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoute_finish': ingress.srcRoute_finish - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_srcRoute_nhop': ingress.srcRoute_nhop - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'tbl_update_ttl': ingress.update_ttl - 
+[14:44:40.014] [bmv2] [D] [thread 27161] Set default default entry for table 'egress.ipv4_final': NoAction - 
+Adding interface s4-eth1 as port 1
+[14:44:40.015] [bmv2] [D] [thread 27161] Adding interface s4-eth1 as port 1
+Adding interface s4-eth2 as port 2
+[14:44:40.044] [bmv2] [D] [thread 27161] Adding interface s4-eth2 as port 2
+[14:44:40.068] [bmv2] [I] [thread 27161] Starting Thrift server on port 9093
+[14:44:40.068] [bmv2] [I] [thread 27161] Thrift server was started
+[14:44:40.179] [bmv2] [D] [thread 27168] [0.0] [cxt 0] Processing packet received on port 2
+[14:44:40.179] [bmv2] [D] [thread 27168] [0.0] [cxt 0] Parser 'parser': start
+[14:44:40.179] [bmv2] [D] [thread 27168] [0.0] [cxt 0] Parser 'parser' entering state 'start'
+[14:44:40.179] [bmv2] [D] [thread 27168] [0.0] [cxt 0] Extracting header 'ethernet'
+[14:44:40.179] [bmv2] [D] [thread 27168] [0.0] [cxt 0] Parser state 'start': key is 86dd
+[14:44:40.179] [bmv2] [T] [thread 27168] [0.0] [cxt 0] Bytes parsed: 14
+[14:44:40.179] [bmv2] [T] [thread 27168] [0.0] [cxt 0] Skipping checksum 'cksum_0' verification because target field invalid
+[14:44:40.179] [bmv2] [D] [thread 27168] [0.0] [cxt 0] Parser 'parser': end
+[14:44:40.179] [bmv2] [D] [thread 27168] [0.0] [cxt 0] Pipeline 'ingress': start
+[14:44:40.179] [bmv2] [T] [thread 27168] [0.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(173) Condition "hdr.ethernet.etherType == TYPE_IPV4 && meta.num == 0" (node_2) is false
+[14:44:40.179] [bmv2] [T] [thread 27168] [0.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(177) Condition "meta.num != (bit<4>)0" (node_4) is false
+[14:44:40.179] [bmv2] [T] [thread 27168] [0.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(279) Condition "hdr.srcRoutes[0].isValid()" (node_58) is false
+[14:44:40.179] [bmv2] [D] [thread 27168] [0.0] [cxt 0] Pipeline 'ingress': end
+[14:44:40.179] [bmv2] [D] [thread 27168] [0.0] [cxt 0] Egress port is 0
+[14:44:40.180] [bmv2] [D] [thread 27169] [0.0] [cxt 0] Pipeline 'egress': start
+[14:44:40.180] [bmv2] [T] [thread 27169] [0.0] [cxt 0] Applying table 'egress.ipv4_final'
+[14:44:40.180] [bmv2] [D] [thread 27169] [0.0] [cxt 0] Looking up key:
+* hdr.ipv4.dstAddr    : 00000000
+
+[14:44:40.180] [bmv2] [D] [thread 27169] [0.0] [cxt 0] Table 'egress.ipv4_final': miss
+[14:44:40.180] [bmv2] [D] [thread 27169] [0.0] [cxt 0] Action entry is NoAction - 
+[14:44:40.180] [bmv2] [T] [thread 27169] [0.0] [cxt 0] Action NoAction
+[14:44:40.180] [bmv2] [D] [thread 27169] [0.0] [cxt 0] Pipeline 'egress': end
+[14:44:40.180] [bmv2] [D] [thread 27169] [0.0] [cxt 0] Deparser 'deparser': start
+[14:44:40.180] [bmv2] [D] [thread 27169] [0.0] [cxt 0] Updating checksum 'cksum'
+[14:44:40.180] [bmv2] [D] [thread 27169] [0.0] [cxt 0] Deparsing header 'ethernet'
+[14:44:40.180] [bmv2] [D] [thread 27169] [0.0] [cxt 0] Deparser 'deparser': end
+[14:44:40.180] [bmv2] [D] [thread 27173] [0.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[14:44:40.401] [bmv2] [T] [thread 27259] bm_get_config
+[14:44:40.403] [bmv2] [T] [thread 27259] bm_table_add_entry
+[14:44:40.403] [bmv2] [D] [thread 27259] Entry 0 added to table 'ingress.ipv4_lpm'
+[14:44:40.403] [bmv2] [D] [thread 27259] Dumping entry 0
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000201/32
+Action entry: ingress.set_path - 5,2,3,2,3,2,0,0,0,0,
+
+[14:44:40.403] [bmv2] [T] [thread 27259] bm_table_add_entry
+[14:44:40.403] [bmv2] [D] [thread 27259] Entry 0 added to table 'egress.ipv4_final'
+[14:44:40.403] [bmv2] [D] [thread 27259] Dumping entry 0
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000101/32
+Action entry: egress.dmac - a000101,
+
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Processing packet received on port 1
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Parser 'parser': start
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Parser 'parser' entering state 'start'
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Extracting header 'ethernet'
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Parser state 'start': key is 0800
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Bytes parsed: 14
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Parser 'parser' entering state 'parse_ipv4'
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Extracting header 'ipv4'
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Parser state 'parse_ipv4' has no switch, going to default next state
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Bytes parsed: 34
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Checksum 'cksum_0': computed 0x2cf3 - actual 0x2cf3
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Verified checksum 'cksum_0': passed
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Parser 'parser': end
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Pipeline 'ingress': start
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(173) Condition "hdr.ethernet.etherType == TYPE_IPV4 && meta.num == 0" (node_2) is true
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Applying table 'ingress.ipv4_lpm'
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Looking up key:
+* hdr.ipv4.dstAddr    : 0a000201
+
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Table 'ingress.ipv4_lpm': hit with handle 0
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000201/32
+Action entry: ingress.set_path - 5,2,3,2,3,2,0,0,0,0,
+
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Action entry is ingress.set_path - 5,2,3,2,3,2,0,0,0,0,
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Action ingress.set_path
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(136) Primitive (bit<32>)num
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(136) Primitive path.write((bit<32>)0, (bit<32>)num)
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Wrote register 'path' at index 0 with value 5
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(137) Primitive path.write((bit<32>)1, (bit<32>)port1)
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Wrote register 'path' at index 1 with value 2
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(138) Primitive path.write((bit<32>)2, (bit<32>)port2)
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Wrote register 'path' at index 2 with value 3
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(139) Primitive path.write((bit<32>)3, (bit<32>)port3)
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Wrote register 'path' at index 3 with value 2
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(140) Primitive path.write((bit<32>)4, (bit<32>)port4)
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Wrote register 'path' at index 4 with value 3
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(141) Primitive path.write((bit<32>)5, (bit<32>)port5)
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Wrote register 'path' at index 5 with value 2
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(142) Primitive path.write((bit<32>)6, (bit<32>)port6)
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Wrote register 'path' at index 6 with value 0
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(143) Primitive path.write((bit<32>)7, (bit<32>)port7)
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Wrote register 'path' at index 7 with value 0
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(144) Primitive path.write((bit<32>)8, (bit<32>)port8)
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Wrote register 'path' at index 8 with value 0
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(145) Primitive path.write((bit<32>)9, (bit<32>)port9)
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Wrote register 'path' at index 9 with value 0
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(146) Primitive meta.num = 1
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(177) Condition "meta.num != (bit<4>)0" (node_4) is true
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Applying table 'tbl_srcRoutePlus179'
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Looking up key:
+
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Table 'tbl_srcRoutePlus179': miss
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Action entry is srcRoutePlus179 - 
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Action srcRoutePlus179
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(179) Primitive path.read(meta.val1, (bit<32>)0)
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Read register 'path' at index 0 read value 5
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(181) Primitive (bit<32>)meta.num
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(181) Primitive path.read(meta.val2, (bit<32>)meta.num)
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Read register 'path' at index 1 read value 2
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Applying table 'tbl_AddHeader'
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Looking up key:
+
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Table 'tbl_AddHeader': miss
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Action entry is ingress.AddHeader - 
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Action ingress.AddHeader
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(6) Primitive 0x1234; ...
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(152) Primitive hdr.srcRoutes.push_front(1)
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(153) Primitive hdr.srcRoutes[0].setValid()
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(154) Primitive hdr.srcRoutes[0].port = port
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(155) Primitive hdr.srcRoutes[0].bos = flag
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(183) Condition "(bit<32>)meta.num != meta.val1" (node_7) is true
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Applying table 'tbl_srcRoutePlus184'
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Looking up key:
+
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Table 'tbl_srcRoutePlus184': miss
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Action entry is srcRoutePlus184 - 
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Action srcRoutePlus184
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(184) Primitive meta.num = meta.num + 1
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(191) Condition "meta.num != 15" (node_10) is true
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Applying table 'tbl_srcRoutePlus192'
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Looking up key:
+
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Table 'tbl_srcRoutePlus192': miss
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Action entry is srcRoutePlus192 - 
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Action srcRoutePlus192
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(192) Primitive (bit<32>)meta.num
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(192) Primitive path.read(meta.val2, (bit<32>)meta.num)
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Read register 'path' at index 2 read value 3
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Applying table 'tbl_AddHeader_0'
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Looking up key:
+
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Table 'tbl_AddHeader_0': miss
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Action entry is ingress.AddHeader - 
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Action ingress.AddHeader
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(6) Primitive 0x1234; ...
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(152) Primitive hdr.srcRoutes.push_front(1)
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(153) Primitive hdr.srcRoutes[0].setValid()
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(154) Primitive hdr.srcRoutes[0].port = port
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(155) Primitive hdr.srcRoutes[0].bos = flag
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(194) Condition "(bit<32>)meta.num != meta.val1" (node_13) is true
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Applying table 'tbl_srcRoutePlus195'
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Looking up key:
+
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Table 'tbl_srcRoutePlus195': miss
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Action entry is srcRoutePlus195 - 
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Action srcRoutePlus195
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(195) Primitive meta.num = meta.num + 1
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(202) Condition "meta.num != 15" (node_16) is true
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Applying table 'tbl_srcRoutePlus203'
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Looking up key:
+
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Table 'tbl_srcRoutePlus203': miss
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Action entry is srcRoutePlus203 - 
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Action srcRoutePlus203
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(203) Primitive (bit<32>)meta.num
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(203) Primitive path.read(meta.val2, (bit<32>)meta.num)
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Read register 'path' at index 3 read value 2
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Applying table 'tbl_AddHeader_1'
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Looking up key:
+
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Table 'tbl_AddHeader_1': miss
+[14:44:56.682] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Action entry is ingress.AddHeader - 
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Action ingress.AddHeader
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(6) Primitive 0x1234; ...
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(152) Primitive hdr.srcRoutes.push_front(1)
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(153) Primitive hdr.srcRoutes[0].setValid()
+[14:44:56.682] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(154) Primitive hdr.srcRoutes[0].port = port
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(155) Primitive hdr.srcRoutes[0].bos = flag
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(205) Condition "(bit<32>)meta.num != meta.val1" (node_19) is true
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Applying table 'tbl_srcRoutePlus206'
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Looking up key:
+
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Table 'tbl_srcRoutePlus206': miss
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Action entry is srcRoutePlus206 - 
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Action srcRoutePlus206
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(206) Primitive meta.num = meta.num + 1
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(213) Condition "meta.num != 15" (node_22) is true
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Applying table 'tbl_srcRoutePlus214'
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Looking up key:
+
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Table 'tbl_srcRoutePlus214': miss
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Action entry is srcRoutePlus214 - 
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Action srcRoutePlus214
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(214) Primitive (bit<32>)meta.num
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(214) Primitive path.read(meta.val2, (bit<32>)meta.num)
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Read register 'path' at index 4 read value 3
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Applying table 'tbl_AddHeader_2'
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Looking up key:
+
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Table 'tbl_AddHeader_2': miss
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Action entry is ingress.AddHeader - 
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Action ingress.AddHeader
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(6) Primitive 0x1234; ...
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(152) Primitive hdr.srcRoutes.push_front(1)
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(153) Primitive hdr.srcRoutes[0].setValid()
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(154) Primitive hdr.srcRoutes[0].port = port
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(155) Primitive hdr.srcRoutes[0].bos = flag
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(216) Condition "(bit<32>)meta.num != meta.val1" (node_25) is true
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Applying table 'tbl_srcRoutePlus217'
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Looking up key:
+
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Table 'tbl_srcRoutePlus217': miss
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Action entry is srcRoutePlus217 - 
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Action srcRoutePlus217
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(217) Primitive meta.num = meta.num + 1
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(224) Condition "meta.num != 15" (node_28) is true
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Applying table 'tbl_srcRoutePlus225'
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Looking up key:
+
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Table 'tbl_srcRoutePlus225': miss
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Action entry is srcRoutePlus225 - 
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Action srcRoutePlus225
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(225) Primitive (bit<32>)meta.num
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(225) Primitive path.read(meta.val2, (bit<32>)meta.num)
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Read register 'path' at index 5 read value 2
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Applying table 'tbl_AddHeader_3'
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Looking up key:
+
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Table 'tbl_AddHeader_3': miss
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Action entry is ingress.AddHeader - 
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Action ingress.AddHeader
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(6) Primitive 0x1234; ...
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(152) Primitive hdr.srcRoutes.push_front(1)
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(153) Primitive hdr.srcRoutes[0].setValid()
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(154) Primitive hdr.srcRoutes[0].port = port
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(155) Primitive hdr.srcRoutes[0].bos = flag
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(227) Condition "(bit<32>)meta.num != meta.val1" (node_31) is false
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Applying table 'tbl_srcRoutePlus230'
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Looking up key:
+
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Table 'tbl_srcRoutePlus230': miss
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Action entry is srcRoutePlus230 - 
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Action srcRoutePlus230
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(230) Primitive meta.num = 15
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(235) Condition "meta.num != 15" (node_34) is false
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(246) Condition "meta.num != 15" (node_40) is false
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(257) Condition "meta.num != 15" (node_46) is false
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(268) Condition "meta.num != 15" (node_52) is false
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(279) Condition "hdr.srcRoutes[0].isValid()" (node_58) is true
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(280) Condition "hdr.srcRoutes[0].bos == 1" (node_59) is false
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Applying table 'tbl_srcRoute_nhop'
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Looking up key:
+
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Table 'tbl_srcRoute_nhop': miss
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Action entry is ingress.srcRoute_nhop - 
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Action ingress.srcRoute_nhop
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(113) Primitive standard_metadata.egress_spec = (bit<9>) hdr.srcRoutes[0].port
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(114) Primitive hdr.srcRoutes.pop_front(1)
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(284) Condition "hdr.ipv4.isValid()" (node_62) is true
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Applying table 'tbl_update_ttl'
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Looking up key:
+
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Table 'tbl_update_ttl': miss
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Action entry is ingress.update_ttl - 
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] Action ingress.update_ttl
+[14:44:56.683] [bmv2] [T] [thread 27168] [1.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(122) Primitive hdr.ipv4.ttl = hdr.ipv4.ttl - 1
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Pipeline 'ingress': end
+[14:44:56.683] [bmv2] [D] [thread 27168] [1.0] [cxt 0] Egress port is 2
+[14:44:56.683] [bmv2] [D] [thread 27171] [1.0] [cxt 0] Pipeline 'egress': start
+[14:44:56.683] [bmv2] [T] [thread 27171] [1.0] [cxt 0] Applying table 'egress.ipv4_final'
+[14:44:56.683] [bmv2] [D] [thread 27171] [1.0] [cxt 0] Looking up key:
+* hdr.ipv4.dstAddr    : 0a000201
+
+[14:44:56.683] [bmv2] [D] [thread 27171] [1.0] [cxt 0] Table 'egress.ipv4_final': miss
+[14:44:56.683] [bmv2] [D] [thread 27171] [1.0] [cxt 0] Action entry is NoAction - 
+[14:44:56.683] [bmv2] [T] [thread 27171] [1.0] [cxt 0] Action NoAction
+[14:44:56.683] [bmv2] [D] [thread 27171] [1.0] [cxt 0] Pipeline 'egress': end
+[14:44:56.683] [bmv2] [D] [thread 27171] [1.0] [cxt 0] Deparser 'deparser': start
+[14:44:56.683] [bmv2] [D] [thread 27171] [1.0] [cxt 0] Updating checksum 'cksum'
+[14:44:56.683] [bmv2] [D] [thread 27171] [1.0] [cxt 0] Deparsing header 'ethernet'
+[14:44:56.683] [bmv2] [D] [thread 27171] [1.0] [cxt 0] Deparsing header 'srcRoutes[0]'
+[14:44:56.683] [bmv2] [D] [thread 27171] [1.0] [cxt 0] Deparsing header 'srcRoutes[1]'
+[14:44:56.683] [bmv2] [D] [thread 27171] [1.0] [cxt 0] Deparsing header 'srcRoutes[2]'
+[14:44:56.683] [bmv2] [D] [thread 27171] [1.0] [cxt 0] Deparsing header 'srcRoutes[3]'
+[14:44:56.683] [bmv2] [D] [thread 27171] [1.0] [cxt 0] Deparsing header 'ipv4'
+[14:44:56.683] [bmv2] [D] [thread 27171] [1.0] [cxt 0] Deparser 'deparser': end
+[14:44:56.683] [bmv2] [D] [thread 27173] [1.0] [cxt 0] Transmitting packet of size 106 out of port 2
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Processing packet received on port 2
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Parser 'parser': start
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Parser 'parser' entering state 'start'
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Extracting header 'ethernet'
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Parser state 'start': key is 1234
+[14:44:56.689] [bmv2] [T] [thread 27168] [2.0] [cxt 0] Bytes parsed: 14
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Parser 'parser' entering state 'parse_srcRouting'
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Extracting to header stack 0, next header is 4
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Parser state 'parse_srcRouting': key is 01
+[14:44:56.689] [bmv2] [T] [thread 27168] [2.0] [cxt 0] Bytes parsed: 16
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Parser 'parser' entering state 'parse_ipv4'
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Extracting header 'ipv4'
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Parser state 'parse_ipv4' has no switch, going to default next state
+[14:44:56.689] [bmv2] [T] [thread 27168] [2.0] [cxt 0] Bytes parsed: 36
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Checksum 'cksum_0': computed 0xd705 - actual 0xd705
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Verified checksum 'cksum_0': passed
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Parser 'parser': end
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Pipeline 'ingress': start
+[14:44:56.689] [bmv2] [T] [thread 27168] [2.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(173) Condition "hdr.ethernet.etherType == TYPE_IPV4 && meta.num == 0" (node_2) is false
+[14:44:56.689] [bmv2] [T] [thread 27168] [2.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(177) Condition "meta.num != (bit<4>)0" (node_4) is false
+[14:44:56.689] [bmv2] [T] [thread 27168] [2.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(279) Condition "hdr.srcRoutes[0].isValid()" (node_58) is true
+[14:44:56.689] [bmv2] [T] [thread 27168] [2.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(280) Condition "hdr.srcRoutes[0].bos == 1" (node_59) is true
+[14:44:56.689] [bmv2] [T] [thread 27168] [2.0] [cxt 0] Applying table 'tbl_srcRoute_finish'
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Looking up key:
+
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Table 'tbl_srcRoute_finish': miss
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Action entry is ingress.srcRoute_finish - 
+[14:44:56.689] [bmv2] [T] [thread 27168] [2.0] [cxt 0] Action ingress.srcRoute_finish
+[14:44:56.689] [bmv2] [T] [thread 27168] [2.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(5) Primitive 0x800; ...
+[14:44:56.689] [bmv2] [T] [thread 27168] [2.0] [cxt 0] Applying table 'tbl_srcRoute_nhop'
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Looking up key:
+
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Table 'tbl_srcRoute_nhop': miss
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Action entry is ingress.srcRoute_nhop - 
+[14:44:56.689] [bmv2] [T] [thread 27168] [2.0] [cxt 0] Action ingress.srcRoute_nhop
+[14:44:56.689] [bmv2] [T] [thread 27168] [2.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(113) Primitive standard_metadata.egress_spec = (bit<9>) hdr.srcRoutes[0].port
+[14:44:56.689] [bmv2] [T] [thread 27168] [2.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(114) Primitive hdr.srcRoutes.pop_front(1)
+[14:44:56.689] [bmv2] [T] [thread 27168] [2.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(284) Condition "hdr.ipv4.isValid()" (node_62) is true
+[14:44:56.689] [bmv2] [T] [thread 27168] [2.0] [cxt 0] Applying table 'tbl_update_ttl'
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Looking up key:
+
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Table 'tbl_update_ttl': miss
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Action entry is ingress.update_ttl - 
+[14:44:56.689] [bmv2] [T] [thread 27168] [2.0] [cxt 0] Action ingress.update_ttl
+[14:44:56.689] [bmv2] [T] [thread 27168] [2.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(122) Primitive hdr.ipv4.ttl = hdr.ipv4.ttl - 1
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Pipeline 'ingress': end
+[14:44:56.689] [bmv2] [D] [thread 27168] [2.0] [cxt 0] Egress port is 1
+[14:44:56.689] [bmv2] [D] [thread 27170] [2.0] [cxt 0] Pipeline 'egress': start
+[14:44:56.689] [bmv2] [T] [thread 27170] [2.0] [cxt 0] Applying table 'egress.ipv4_final'
+[14:44:56.689] [bmv2] [D] [thread 27170] [2.0] [cxt 0] Looking up key:
+* hdr.ipv4.dstAddr    : 0a000101
+
+[14:44:56.689] [bmv2] [D] [thread 27170] [2.0] [cxt 0] Table 'egress.ipv4_final': hit with handle 0
+[14:44:56.689] [bmv2] [D] [thread 27170] [2.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000101/32
+Action entry: egress.dmac - a000101,
+
+[14:44:56.689] [bmv2] [D] [thread 27170] [2.0] [cxt 0] Action entry is egress.dmac - a000101,
+[14:44:56.689] [bmv2] [T] [thread 27170] [2.0] [cxt 0] Action egress.dmac
+[14:44:56.689] [bmv2] [T] [thread 27170] [2.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(88) Primitive hdr.ethernet.dstAddr = dstAddr
+[14:44:56.689] [bmv2] [D] [thread 27170] [2.0] [cxt 0] Pipeline 'egress': end
+[14:44:56.689] [bmv2] [D] [thread 27170] [2.0] [cxt 0] Deparser 'deparser': start
+[14:44:56.689] [bmv2] [D] [thread 27170] [2.0] [cxt 0] Updating checksum 'cksum'
+[14:44:56.689] [bmv2] [D] [thread 27170] [2.0] [cxt 0] Deparsing header 'ethernet'
+[14:44:56.689] [bmv2] [D] [thread 27170] [2.0] [cxt 0] Deparsing header 'ipv4'
+[14:44:56.689] [bmv2] [D] [thread 27170] [2.0] [cxt 0] Deparser 'deparser': end
+[14:44:56.689] [bmv2] [D] [thread 27173] [2.0] [cxt 0] Transmitting packet of size 98 out of port 1
+[14:44:57.687] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Processing packet received on port 1
+[14:44:57.687] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Parser 'parser': start
+[14:44:57.687] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Parser 'parser' entering state 'start'
+[14:44:57.687] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Extracting header 'ethernet'
+[14:44:57.687] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Parser state 'start': key is 0800
+[14:44:57.687] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Bytes parsed: 14
+[14:44:57.687] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Parser 'parser' entering state 'parse_ipv4'
+[14:44:57.687] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Extracting header 'ipv4'
+[14:44:57.687] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Parser state 'parse_ipv4' has no switch, going to default next state
+[14:44:57.687] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Bytes parsed: 34
+[14:44:57.687] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Checksum 'cksum_0': computed 0x2c27 - actual 0x2c27
+[14:44:57.687] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Verified checksum 'cksum_0': passed
+[14:44:57.687] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Parser 'parser': end
+[14:44:57.687] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Pipeline 'ingress': start
+[14:44:57.687] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(173) Condition "hdr.ethernet.etherType == TYPE_IPV4 && meta.num == 0" (node_2) is true
+[14:44:57.687] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Applying table 'ingress.ipv4_lpm'
+[14:44:57.687] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Looking up key:
+* hdr.ipv4.dstAddr    : 0a000201
+
+[14:44:57.687] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Table 'ingress.ipv4_lpm': hit with handle 0
+[14:44:57.687] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000201/32
+Action entry: ingress.set_path - 5,2,3,2,3,2,0,0,0,0,
+
+[14:44:57.688] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Action entry is ingress.set_path - 5,2,3,2,3,2,0,0,0,0,
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Action ingress.set_path
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(136) Primitive (bit<32>)num
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(136) Primitive path.write((bit<32>)0, (bit<32>)num)
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Wrote register 'path' at index 0 with value 5
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(137) Primitive path.write((bit<32>)1, (bit<32>)port1)
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Wrote register 'path' at index 1 with value 2
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(138) Primitive path.write((bit<32>)2, (bit<32>)port2)
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Wrote register 'path' at index 2 with value 3
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(139) Primitive path.write((bit<32>)3, (bit<32>)port3)
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Wrote register 'path' at index 3 with value 2
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(140) Primitive path.write((bit<32>)4, (bit<32>)port4)
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Wrote register 'path' at index 4 with value 3
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(141) Primitive path.write((bit<32>)5, (bit<32>)port5)
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Wrote register 'path' at index 5 with value 2
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(142) Primitive path.write((bit<32>)6, (bit<32>)port6)
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Wrote register 'path' at index 6 with value 0
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(143) Primitive path.write((bit<32>)7, (bit<32>)port7)
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Wrote register 'path' at index 7 with value 0
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(144) Primitive path.write((bit<32>)8, (bit<32>)port8)
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Wrote register 'path' at index 8 with value 0
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(145) Primitive path.write((bit<32>)9, (bit<32>)port9)
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Wrote register 'path' at index 9 with value 0
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(146) Primitive meta.num = 1
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(177) Condition "meta.num != (bit<4>)0" (node_4) is true
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Applying table 'tbl_srcRoutePlus179'
+[14:44:57.688] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Looking up key:
+
+[14:44:57.688] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Table 'tbl_srcRoutePlus179': miss
+[14:44:57.688] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Action entry is srcRoutePlus179 - 
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Action srcRoutePlus179
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(179) Primitive path.read(meta.val1, (bit<32>)0)
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Read register 'path' at index 0 read value 5
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(181) Primitive (bit<32>)meta.num
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(181) Primitive path.read(meta.val2, (bit<32>)meta.num)
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Read register 'path' at index 1 read value 2
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Applying table 'tbl_AddHeader'
+[14:44:57.688] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Looking up key:
+
+[14:44:57.688] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Table 'tbl_AddHeader': miss
+[14:44:57.688] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Action entry is ingress.AddHeader - 
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Action ingress.AddHeader
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(6) Primitive 0x1234; ...
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(152) Primitive hdr.srcRoutes.push_front(1)
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(153) Primitive hdr.srcRoutes[0].setValid()
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(154) Primitive hdr.srcRoutes[0].port = port
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(155) Primitive hdr.srcRoutes[0].bos = flag
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(183) Condition "(bit<32>)meta.num != meta.val1" (node_7) is true
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Applying table 'tbl_srcRoutePlus184'
+[14:44:57.688] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Looking up key:
+
+[14:44:57.688] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Table 'tbl_srcRoutePlus184': miss
+[14:44:57.688] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Action entry is srcRoutePlus184 - 
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Action srcRoutePlus184
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(184) Primitive meta.num = meta.num + 1
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(191) Condition "meta.num != 15" (node_10) is true
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Applying table 'tbl_srcRoutePlus192'
+[14:44:57.688] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Looking up key:
+
+[14:44:57.688] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Table 'tbl_srcRoutePlus192': miss
+[14:44:57.688] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Action entry is srcRoutePlus192 - 
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Action srcRoutePlus192
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(192) Primitive (bit<32>)meta.num
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(192) Primitive path.read(meta.val2, (bit<32>)meta.num)
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Read register 'path' at index 2 read value 3
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Applying table 'tbl_AddHeader_0'
+[14:44:57.688] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Looking up key:
+
+[14:44:57.688] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Table 'tbl_AddHeader_0': miss
+[14:44:57.688] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Action entry is ingress.AddHeader - 
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Action ingress.AddHeader
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(6) Primitive 0x1234; ...
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(152) Primitive hdr.srcRoutes.push_front(1)
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(153) Primitive hdr.srcRoutes[0].setValid()
+[14:44:57.688] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(154) Primitive hdr.srcRoutes[0].port = port
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(155) Primitive hdr.srcRoutes[0].bos = flag
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(194) Condition "(bit<32>)meta.num != meta.val1" (node_13) is true
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Applying table 'tbl_srcRoutePlus195'
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Looking up key:
+
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Table 'tbl_srcRoutePlus195': miss
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Action entry is srcRoutePlus195 - 
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Action srcRoutePlus195
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(195) Primitive meta.num = meta.num + 1
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(202) Condition "meta.num != 15" (node_16) is true
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Applying table 'tbl_srcRoutePlus203'
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Looking up key:
+
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Table 'tbl_srcRoutePlus203': miss
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Action entry is srcRoutePlus203 - 
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Action srcRoutePlus203
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(203) Primitive (bit<32>)meta.num
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(203) Primitive path.read(meta.val2, (bit<32>)meta.num)
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Read register 'path' at index 3 read value 2
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Applying table 'tbl_AddHeader_1'
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Looking up key:
+
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Table 'tbl_AddHeader_1': miss
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Action entry is ingress.AddHeader - 
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Action ingress.AddHeader
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(6) Primitive 0x1234; ...
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(152) Primitive hdr.srcRoutes.push_front(1)
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(153) Primitive hdr.srcRoutes[0].setValid()
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(154) Primitive hdr.srcRoutes[0].port = port
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(155) Primitive hdr.srcRoutes[0].bos = flag
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(205) Condition "(bit<32>)meta.num != meta.val1" (node_19) is true
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Applying table 'tbl_srcRoutePlus206'
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Looking up key:
+
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Table 'tbl_srcRoutePlus206': miss
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Action entry is srcRoutePlus206 - 
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Action srcRoutePlus206
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(206) Primitive meta.num = meta.num + 1
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(213) Condition "meta.num != 15" (node_22) is true
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Applying table 'tbl_srcRoutePlus214'
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Looking up key:
+
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Table 'tbl_srcRoutePlus214': miss
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Action entry is srcRoutePlus214 - 
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Action srcRoutePlus214
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(214) Primitive (bit<32>)meta.num
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(214) Primitive path.read(meta.val2, (bit<32>)meta.num)
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Read register 'path' at index 4 read value 3
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Applying table 'tbl_AddHeader_2'
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Looking up key:
+
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Table 'tbl_AddHeader_2': miss
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Action entry is ingress.AddHeader - 
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Action ingress.AddHeader
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(6) Primitive 0x1234; ...
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(152) Primitive hdr.srcRoutes.push_front(1)
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(153) Primitive hdr.srcRoutes[0].setValid()
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(154) Primitive hdr.srcRoutes[0].port = port
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(155) Primitive hdr.srcRoutes[0].bos = flag
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(216) Condition "(bit<32>)meta.num != meta.val1" (node_25) is true
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Applying table 'tbl_srcRoutePlus217'
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Looking up key:
+
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Table 'tbl_srcRoutePlus217': miss
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Action entry is srcRoutePlus217 - 
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Action srcRoutePlus217
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(217) Primitive meta.num = meta.num + 1
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(224) Condition "meta.num != 15" (node_28) is true
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Applying table 'tbl_srcRoutePlus225'
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Looking up key:
+
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Table 'tbl_srcRoutePlus225': miss
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Action entry is srcRoutePlus225 - 
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Action srcRoutePlus225
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(225) Primitive (bit<32>)meta.num
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(225) Primitive path.read(meta.val2, (bit<32>)meta.num)
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Read register 'path' at index 5 read value 2
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Applying table 'tbl_AddHeader_3'
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Looking up key:
+
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Table 'tbl_AddHeader_3': miss
+[14:44:57.689] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Action entry is ingress.AddHeader - 
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Action ingress.AddHeader
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(6) Primitive 0x1234; ...
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(152) Primitive hdr.srcRoutes.push_front(1)
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(153) Primitive hdr.srcRoutes[0].setValid()
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(154) Primitive hdr.srcRoutes[0].port = port
+[14:44:57.689] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(155) Primitive hdr.srcRoutes[0].bos = flag
+[14:44:57.690] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(227) Condition "(bit<32>)meta.num != meta.val1" (node_31) is false
+[14:44:57.690] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Applying table 'tbl_srcRoutePlus230'
+[14:44:57.690] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Looking up key:
+
+[14:44:57.690] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Table 'tbl_srcRoutePlus230': miss
+[14:44:57.690] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Action entry is srcRoutePlus230 - 
+[14:44:57.690] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Action srcRoutePlus230
+[14:44:57.690] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(230) Primitive meta.num = 15
+[14:44:57.690] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(235) Condition "meta.num != 15" (node_34) is false
+[14:44:57.690] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(246) Condition "meta.num != 15" (node_40) is false
+[14:44:57.690] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(257) Condition "meta.num != 15" (node_46) is false
+[14:44:57.690] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(268) Condition "meta.num != 15" (node_52) is false
+[14:44:57.690] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(279) Condition "hdr.srcRoutes[0].isValid()" (node_58) is true
+[14:44:57.690] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(280) Condition "hdr.srcRoutes[0].bos == 1" (node_59) is false
+[14:44:57.690] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Applying table 'tbl_srcRoute_nhop'
+[14:44:57.690] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Looking up key:
+
+[14:44:57.690] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Table 'tbl_srcRoute_nhop': miss
+[14:44:57.690] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Action entry is ingress.srcRoute_nhop - 
+[14:44:57.690] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Action ingress.srcRoute_nhop
+[14:44:57.690] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(113) Primitive standard_metadata.egress_spec = (bit<9>) hdr.srcRoutes[0].port
+[14:44:57.690] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(114) Primitive hdr.srcRoutes.pop_front(1)
+[14:44:57.690] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(284) Condition "hdr.ipv4.isValid()" (node_62) is true
+[14:44:57.690] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Applying table 'tbl_update_ttl'
+[14:44:57.690] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Looking up key:
+
+[14:44:57.690] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Table 'tbl_update_ttl': miss
+[14:44:57.690] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Action entry is ingress.update_ttl - 
+[14:44:57.690] [bmv2] [T] [thread 27168] [3.0] [cxt 0] Action ingress.update_ttl
+[14:44:57.690] [bmv2] [T] [thread 27168] [3.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(122) Primitive hdr.ipv4.ttl = hdr.ipv4.ttl - 1
+[14:44:57.690] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Pipeline 'ingress': end
+[14:44:57.690] [bmv2] [D] [thread 27168] [3.0] [cxt 0] Egress port is 2
+[14:44:57.690] [bmv2] [D] [thread 27171] [3.0] [cxt 0] Pipeline 'egress': start
+[14:44:57.690] [bmv2] [T] [thread 27171] [3.0] [cxt 0] Applying table 'egress.ipv4_final'
+[14:44:57.690] [bmv2] [D] [thread 27171] [3.0] [cxt 0] Looking up key:
+* hdr.ipv4.dstAddr    : 0a000201
+
+[14:44:57.690] [bmv2] [D] [thread 27171] [3.0] [cxt 0] Table 'egress.ipv4_final': miss
+[14:44:57.690] [bmv2] [D] [thread 27171] [3.0] [cxt 0] Action entry is NoAction - 
+[14:44:57.690] [bmv2] [T] [thread 27171] [3.0] [cxt 0] Action NoAction
+[14:44:57.690] [bmv2] [D] [thread 27171] [3.0] [cxt 0] Pipeline 'egress': end
+[14:44:57.690] [bmv2] [D] [thread 27171] [3.0] [cxt 0] Deparser 'deparser': start
+[14:44:57.690] [bmv2] [D] [thread 27171] [3.0] [cxt 0] Updating checksum 'cksum'
+[14:44:57.690] [bmv2] [D] [thread 27171] [3.0] [cxt 0] Deparsing header 'ethernet'
+[14:44:57.690] [bmv2] [D] [thread 27171] [3.0] [cxt 0] Deparsing header 'srcRoutes[0]'
+[14:44:57.690] [bmv2] [D] [thread 27171] [3.0] [cxt 0] Deparsing header 'srcRoutes[1]'
+[14:44:57.690] [bmv2] [D] [thread 27171] [3.0] [cxt 0] Deparsing header 'srcRoutes[2]'
+[14:44:57.690] [bmv2] [D] [thread 27171] [3.0] [cxt 0] Deparsing header 'srcRoutes[3]'
+[14:44:57.690] [bmv2] [D] [thread 27171] [3.0] [cxt 0] Deparsing header 'ipv4'
+[14:44:57.690] [bmv2] [D] [thread 27171] [3.0] [cxt 0] Deparser 'deparser': end
+[14:44:57.690] [bmv2] [D] [thread 27173] [3.0] [cxt 0] Transmitting packet of size 106 out of port 2
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Processing packet received on port 2
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Parser 'parser': start
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Parser 'parser' entering state 'start'
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Extracting header 'ethernet'
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Parser state 'start': key is 1234
+[14:44:57.697] [bmv2] [T] [thread 27168] [4.0] [cxt 0] Bytes parsed: 14
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Parser 'parser' entering state 'parse_srcRouting'
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Extracting to header stack 0, next header is 4
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Parser state 'parse_srcRouting': key is 01
+[14:44:57.697] [bmv2] [T] [thread 27168] [4.0] [cxt 0] Bytes parsed: 16
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Parser 'parser' entering state 'parse_ipv4'
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Extracting header 'ipv4'
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Parser state 'parse_ipv4' has no switch, going to default next state
+[14:44:57.697] [bmv2] [T] [thread 27168] [4.0] [cxt 0] Bytes parsed: 36
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Checksum 'cksum_0': computed 0xd65c - actual 0xd65c
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Verified checksum 'cksum_0': passed
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Parser 'parser': end
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Pipeline 'ingress': start
+[14:44:57.697] [bmv2] [T] [thread 27168] [4.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(173) Condition "hdr.ethernet.etherType == TYPE_IPV4 && meta.num == 0" (node_2) is false
+[14:44:57.697] [bmv2] [T] [thread 27168] [4.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(177) Condition "meta.num != (bit<4>)0" (node_4) is false
+[14:44:57.697] [bmv2] [T] [thread 27168] [4.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(279) Condition "hdr.srcRoutes[0].isValid()" (node_58) is true
+[14:44:57.697] [bmv2] [T] [thread 27168] [4.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(280) Condition "hdr.srcRoutes[0].bos == 1" (node_59) is true
+[14:44:57.697] [bmv2] [T] [thread 27168] [4.0] [cxt 0] Applying table 'tbl_srcRoute_finish'
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Looking up key:
+
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Table 'tbl_srcRoute_finish': miss
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Action entry is ingress.srcRoute_finish - 
+[14:44:57.697] [bmv2] [T] [thread 27168] [4.0] [cxt 0] Action ingress.srcRoute_finish
+[14:44:57.697] [bmv2] [T] [thread 27168] [4.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(5) Primitive 0x800; ...
+[14:44:57.697] [bmv2] [T] [thread 27168] [4.0] [cxt 0] Applying table 'tbl_srcRoute_nhop'
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Looking up key:
+
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Table 'tbl_srcRoute_nhop': miss
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Action entry is ingress.srcRoute_nhop - 
+[14:44:57.697] [bmv2] [T] [thread 27168] [4.0] [cxt 0] Action ingress.srcRoute_nhop
+[14:44:57.697] [bmv2] [T] [thread 27168] [4.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(113) Primitive standard_metadata.egress_spec = (bit<9>) hdr.srcRoutes[0].port
+[14:44:57.697] [bmv2] [T] [thread 27168] [4.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(114) Primitive hdr.srcRoutes.pop_front(1)
+[14:44:57.697] [bmv2] [T] [thread 27168] [4.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(284) Condition "hdr.ipv4.isValid()" (node_62) is true
+[14:44:57.697] [bmv2] [T] [thread 27168] [4.0] [cxt 0] Applying table 'tbl_update_ttl'
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Looking up key:
+
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Table 'tbl_update_ttl': miss
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Action entry is ingress.update_ttl - 
+[14:44:57.697] [bmv2] [T] [thread 27168] [4.0] [cxt 0] Action ingress.update_ttl
+[14:44:57.697] [bmv2] [T] [thread 27168] [4.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(122) Primitive hdr.ipv4.ttl = hdr.ipv4.ttl - 1
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Pipeline 'ingress': end
+[14:44:57.697] [bmv2] [D] [thread 27168] [4.0] [cxt 0] Egress port is 1
+[14:44:57.697] [bmv2] [D] [thread 27170] [4.0] [cxt 0] Pipeline 'egress': start
+[14:44:57.697] [bmv2] [T] [thread 27170] [4.0] [cxt 0] Applying table 'egress.ipv4_final'
+[14:44:57.697] [bmv2] [D] [thread 27170] [4.0] [cxt 0] Looking up key:
+* hdr.ipv4.dstAddr    : 0a000101
+
+[14:44:57.697] [bmv2] [D] [thread 27170] [4.0] [cxt 0] Table 'egress.ipv4_final': hit with handle 0
+[14:44:57.697] [bmv2] [D] [thread 27170] [4.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000101/32
+Action entry: egress.dmac - a000101,
+
+[14:44:57.697] [bmv2] [D] [thread 27170] [4.0] [cxt 0] Action entry is egress.dmac - a000101,
+[14:44:57.697] [bmv2] [T] [thread 27170] [4.0] [cxt 0] Action egress.dmac
+[14:44:57.697] [bmv2] [T] [thread 27170] [4.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(88) Primitive hdr.ethernet.dstAddr = dstAddr
+[14:44:57.697] [bmv2] [D] [thread 27170] [4.0] [cxt 0] Pipeline 'egress': end
+[14:44:57.697] [bmv2] [D] [thread 27170] [4.0] [cxt 0] Deparser 'deparser': start
+[14:44:57.697] [bmv2] [D] [thread 27170] [4.0] [cxt 0] Updating checksum 'cksum'
+[14:44:57.697] [bmv2] [D] [thread 27170] [4.0] [cxt 0] Deparsing header 'ethernet'
+[14:44:57.697] [bmv2] [D] [thread 27170] [4.0] [cxt 0] Deparsing header 'ipv4'
+[14:44:57.697] [bmv2] [D] [thread 27170] [4.0] [cxt 0] Deparser 'deparser': end
+[14:44:57.697] [bmv2] [D] [thread 27173] [4.0] [cxt 0] Transmitting packet of size 98 out of port 1
+[14:44:58.691] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Processing packet received on port 1
+[14:44:58.691] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Parser 'parser': start
+[14:44:58.691] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Parser 'parser' entering state 'start'
+[14:44:58.691] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Extracting header 'ethernet'
+[14:44:58.691] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Parser state 'start': key is 0800
+[14:44:58.691] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Bytes parsed: 14
+[14:44:58.691] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Parser 'parser' entering state 'parse_ipv4'
+[14:44:58.691] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Extracting header 'ipv4'
+[14:44:58.691] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Parser state 'parse_ipv4' has no switch, going to default next state
+[14:44:58.691] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Bytes parsed: 34
+[14:44:58.692] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Checksum 'cksum_0': computed 0x2b3b - actual 0x2b3b
+[14:44:58.692] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Verified checksum 'cksum_0': passed
+[14:44:58.692] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Parser 'parser': end
+[14:44:58.692] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Pipeline 'ingress': start
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(173) Condition "hdr.ethernet.etherType == TYPE_IPV4 && meta.num == 0" (node_2) is true
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Applying table 'ingress.ipv4_lpm'
+[14:44:58.692] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Looking up key:
+* hdr.ipv4.dstAddr    : 0a000201
+
+[14:44:58.692] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Table 'ingress.ipv4_lpm': hit with handle 0
+[14:44:58.692] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000201/32
+Action entry: ingress.set_path - 5,2,3,2,3,2,0,0,0,0,
+
+[14:44:58.692] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Action entry is ingress.set_path - 5,2,3,2,3,2,0,0,0,0,
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Action ingress.set_path
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(136) Primitive (bit<32>)num
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(136) Primitive path.write((bit<32>)0, (bit<32>)num)
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Wrote register 'path' at index 0 with value 5
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(137) Primitive path.write((bit<32>)1, (bit<32>)port1)
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Wrote register 'path' at index 1 with value 2
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(138) Primitive path.write((bit<32>)2, (bit<32>)port2)
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Wrote register 'path' at index 2 with value 3
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(139) Primitive path.write((bit<32>)3, (bit<32>)port3)
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Wrote register 'path' at index 3 with value 2
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(140) Primitive path.write((bit<32>)4, (bit<32>)port4)
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Wrote register 'path' at index 4 with value 3
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(141) Primitive path.write((bit<32>)5, (bit<32>)port5)
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Wrote register 'path' at index 5 with value 2
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(142) Primitive path.write((bit<32>)6, (bit<32>)port6)
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Wrote register 'path' at index 6 with value 0
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(143) Primitive path.write((bit<32>)7, (bit<32>)port7)
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Wrote register 'path' at index 7 with value 0
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(144) Primitive path.write((bit<32>)8, (bit<32>)port8)
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Wrote register 'path' at index 8 with value 0
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(145) Primitive path.write((bit<32>)9, (bit<32>)port9)
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Wrote register 'path' at index 9 with value 0
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(146) Primitive meta.num = 1
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(177) Condition "meta.num != (bit<4>)0" (node_4) is true
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Applying table 'tbl_srcRoutePlus179'
+[14:44:58.692] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Looking up key:
+
+[14:44:58.692] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Table 'tbl_srcRoutePlus179': miss
+[14:44:58.692] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Action entry is srcRoutePlus179 - 
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Action srcRoutePlus179
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(179) Primitive path.read(meta.val1, (bit<32>)0)
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Read register 'path' at index 0 read value 5
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(181) Primitive (bit<32>)meta.num
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(181) Primitive path.read(meta.val2, (bit<32>)meta.num)
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Read register 'path' at index 1 read value 2
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Applying table 'tbl_AddHeader'
+[14:44:58.692] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Looking up key:
+
+[14:44:58.692] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Table 'tbl_AddHeader': miss
+[14:44:58.692] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Action entry is ingress.AddHeader - 
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Action ingress.AddHeader
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(6) Primitive 0x1234; ...
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(152) Primitive hdr.srcRoutes.push_front(1)
+[14:44:58.692] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(153) Primitive hdr.srcRoutes[0].setValid()
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(154) Primitive hdr.srcRoutes[0].port = port
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(155) Primitive hdr.srcRoutes[0].bos = flag
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(183) Condition "(bit<32>)meta.num != meta.val1" (node_7) is true
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Applying table 'tbl_srcRoutePlus184'
+[14:44:58.693] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Looking up key:
+
+[14:44:58.693] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Table 'tbl_srcRoutePlus184': miss
+[14:44:58.693] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Action entry is srcRoutePlus184 - 
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Action srcRoutePlus184
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(184) Primitive meta.num = meta.num + 1
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(191) Condition "meta.num != 15" (node_10) is true
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Applying table 'tbl_srcRoutePlus192'
+[14:44:58.693] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Looking up key:
+
+[14:44:58.693] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Table 'tbl_srcRoutePlus192': miss
+[14:44:58.693] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Action entry is srcRoutePlus192 - 
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Action srcRoutePlus192
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(192) Primitive (bit<32>)meta.num
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(192) Primitive path.read(meta.val2, (bit<32>)meta.num)
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Read register 'path' at index 2 read value 3
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Applying table 'tbl_AddHeader_0'
+[14:44:58.693] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Looking up key:
+
+[14:44:58.693] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Table 'tbl_AddHeader_0': miss
+[14:44:58.693] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Action entry is ingress.AddHeader - 
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Action ingress.AddHeader
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(6) Primitive 0x1234; ...
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(152) Primitive hdr.srcRoutes.push_front(1)
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(153) Primitive hdr.srcRoutes[0].setValid()
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(154) Primitive hdr.srcRoutes[0].port = port
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(155) Primitive hdr.srcRoutes[0].bos = flag
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(194) Condition "(bit<32>)meta.num != meta.val1" (node_13) is true
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Applying table 'tbl_srcRoutePlus195'
+[14:44:58.693] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Looking up key:
+
+[14:44:58.693] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Table 'tbl_srcRoutePlus195': miss
+[14:44:58.693] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Action entry is srcRoutePlus195 - 
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Action srcRoutePlus195
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(195) Primitive meta.num = meta.num + 1
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(202) Condition "meta.num != 15" (node_16) is true
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Applying table 'tbl_srcRoutePlus203'
+[14:44:58.693] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Looking up key:
+
+[14:44:58.693] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Table 'tbl_srcRoutePlus203': miss
+[14:44:58.693] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Action entry is srcRoutePlus203 - 
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Action srcRoutePlus203
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(203) Primitive (bit<32>)meta.num
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(203) Primitive path.read(meta.val2, (bit<32>)meta.num)
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Read register 'path' at index 3 read value 2
+[14:44:58.693] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Applying table 'tbl_AddHeader_1'
+[14:44:58.693] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Looking up key:
+
+[14:44:58.694] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Table 'tbl_AddHeader_1': miss
+[14:44:58.694] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Action entry is ingress.AddHeader - 
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Action ingress.AddHeader
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(6) Primitive 0x1234; ...
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(152) Primitive hdr.srcRoutes.push_front(1)
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(153) Primitive hdr.srcRoutes[0].setValid()
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(154) Primitive hdr.srcRoutes[0].port = port
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(155) Primitive hdr.srcRoutes[0].bos = flag
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(205) Condition "(bit<32>)meta.num != meta.val1" (node_19) is true
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Applying table 'tbl_srcRoutePlus206'
+[14:44:58.694] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Looking up key:
+
+[14:44:58.694] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Table 'tbl_srcRoutePlus206': miss
+[14:44:58.694] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Action entry is srcRoutePlus206 - 
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Action srcRoutePlus206
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(206) Primitive meta.num = meta.num + 1
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(213) Condition "meta.num != 15" (node_22) is true
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Applying table 'tbl_srcRoutePlus214'
+[14:44:58.694] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Looking up key:
+
+[14:44:58.694] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Table 'tbl_srcRoutePlus214': miss
+[14:44:58.694] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Action entry is srcRoutePlus214 - 
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Action srcRoutePlus214
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(214) Primitive (bit<32>)meta.num
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(214) Primitive path.read(meta.val2, (bit<32>)meta.num)
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Read register 'path' at index 4 read value 3
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Applying table 'tbl_AddHeader_2'
+[14:44:58.694] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Looking up key:
+
+[14:44:58.694] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Table 'tbl_AddHeader_2': miss
+[14:44:58.694] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Action entry is ingress.AddHeader - 
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Action ingress.AddHeader
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(6) Primitive 0x1234; ...
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(152) Primitive hdr.srcRoutes.push_front(1)
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(153) Primitive hdr.srcRoutes[0].setValid()
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(154) Primitive hdr.srcRoutes[0].port = port
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(155) Primitive hdr.srcRoutes[0].bos = flag
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(216) Condition "(bit<32>)meta.num != meta.val1" (node_25) is true
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Applying table 'tbl_srcRoutePlus217'
+[14:44:58.694] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Looking up key:
+
+[14:44:58.694] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Table 'tbl_srcRoutePlus217': miss
+[14:44:58.694] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Action entry is srcRoutePlus217 - 
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Action srcRoutePlus217
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(217) Primitive meta.num = meta.num + 1
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(224) Condition "meta.num != 15" (node_28) is true
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Applying table 'tbl_srcRoutePlus225'
+[14:44:58.694] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Looking up key:
+
+[14:44:58.694] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Table 'tbl_srcRoutePlus225': miss
+[14:44:58.694] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Action entry is srcRoutePlus225 - 
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Action srcRoutePlus225
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(225) Primitive (bit<32>)meta.num
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(225) Primitive path.read(meta.val2, (bit<32>)meta.num)
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Read register 'path' at index 5 read value 2
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Applying table 'tbl_AddHeader_3'
+[14:44:58.694] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Looking up key:
+
+[14:44:58.694] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Table 'tbl_AddHeader_3': miss
+[14:44:58.694] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Action entry is ingress.AddHeader - 
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Action ingress.AddHeader
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(6) Primitive 0x1234; ...
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(152) Primitive hdr.srcRoutes.push_front(1)
+[14:44:58.694] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(153) Primitive hdr.srcRoutes[0].setValid()
+[14:44:58.695] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(154) Primitive hdr.srcRoutes[0].port = port
+[14:44:58.695] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(155) Primitive hdr.srcRoutes[0].bos = flag
+[14:44:58.695] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(227) Condition "(bit<32>)meta.num != meta.val1" (node_31) is false
+[14:44:58.695] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Applying table 'tbl_srcRoutePlus230'
+[14:44:58.695] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Looking up key:
+
+[14:44:58.695] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Table 'tbl_srcRoutePlus230': miss
+[14:44:58.695] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Action entry is srcRoutePlus230 - 
+[14:44:58.695] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Action srcRoutePlus230
+[14:44:58.695] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(230) Primitive meta.num = 15
+[14:44:58.695] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(235) Condition "meta.num != 15" (node_34) is false
+[14:44:58.695] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(246) Condition "meta.num != 15" (node_40) is false
+[14:44:58.695] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(257) Condition "meta.num != 15" (node_46) is false
+[14:44:58.695] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(268) Condition "meta.num != 15" (node_52) is false
+[14:44:58.695] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(279) Condition "hdr.srcRoutes[0].isValid()" (node_58) is true
+[14:44:58.695] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(280) Condition "hdr.srcRoutes[0].bos == 1" (node_59) is false
+[14:44:58.695] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Applying table 'tbl_srcRoute_nhop'
+[14:44:58.695] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Looking up key:
+
+[14:44:58.695] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Table 'tbl_srcRoute_nhop': miss
+[14:44:58.695] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Action entry is ingress.srcRoute_nhop - 
+[14:44:58.695] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Action ingress.srcRoute_nhop
+[14:44:58.695] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(113) Primitive standard_metadata.egress_spec = (bit<9>) hdr.srcRoutes[0].port
+[14:44:58.695] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(114) Primitive hdr.srcRoutes.pop_front(1)
+[14:44:58.695] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(284) Condition "hdr.ipv4.isValid()" (node_62) is true
+[14:44:58.695] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Applying table 'tbl_update_ttl'
+[14:44:58.695] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Looking up key:
+
+[14:44:58.695] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Table 'tbl_update_ttl': miss
+[14:44:58.695] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Action entry is ingress.update_ttl - 
+[14:44:58.695] [bmv2] [T] [thread 27168] [5.0] [cxt 0] Action ingress.update_ttl
+[14:44:58.695] [bmv2] [T] [thread 27168] [5.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(122) Primitive hdr.ipv4.ttl = hdr.ipv4.ttl - 1
+[14:44:58.695] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Pipeline 'ingress': end
+[14:44:58.695] [bmv2] [D] [thread 27168] [5.0] [cxt 0] Egress port is 2
+[14:44:58.695] [bmv2] [D] [thread 27171] [5.0] [cxt 0] Pipeline 'egress': start
+[14:44:58.695] [bmv2] [T] [thread 27171] [5.0] [cxt 0] Applying table 'egress.ipv4_final'
+[14:44:58.695] [bmv2] [D] [thread 27171] [5.0] [cxt 0] Looking up key:
+* hdr.ipv4.dstAddr    : 0a000201
+
+[14:44:58.695] [bmv2] [D] [thread 27171] [5.0] [cxt 0] Table 'egress.ipv4_final': miss
+[14:44:58.695] [bmv2] [D] [thread 27171] [5.0] [cxt 0] Action entry is NoAction - 
+[14:44:58.695] [bmv2] [T] [thread 27171] [5.0] [cxt 0] Action NoAction
+[14:44:58.695] [bmv2] [D] [thread 27171] [5.0] [cxt 0] Pipeline 'egress': end
+[14:44:58.695] [bmv2] [D] [thread 27171] [5.0] [cxt 0] Deparser 'deparser': start
+[14:44:58.695] [bmv2] [D] [thread 27171] [5.0] [cxt 0] Updating checksum 'cksum'
+[14:44:58.695] [bmv2] [D] [thread 27171] [5.0] [cxt 0] Deparsing header 'ethernet'
+[14:44:58.695] [bmv2] [D] [thread 27171] [5.0] [cxt 0] Deparsing header 'srcRoutes[0]'
+[14:44:58.695] [bmv2] [D] [thread 27171] [5.0] [cxt 0] Deparsing header 'srcRoutes[1]'
+[14:44:58.695] [bmv2] [D] [thread 27171] [5.0] [cxt 0] Deparsing header 'srcRoutes[2]'
+[14:44:58.695] [bmv2] [D] [thread 27171] [5.0] [cxt 0] Deparsing header 'srcRoutes[3]'
+[14:44:58.695] [bmv2] [D] [thread 27171] [5.0] [cxt 0] Deparsing header 'ipv4'
+[14:44:58.695] [bmv2] [D] [thread 27171] [5.0] [cxt 0] Deparser 'deparser': end
+[14:44:58.695] [bmv2] [D] [thread 27173] [5.0] [cxt 0] Transmitting packet of size 106 out of port 2
+[14:44:58.702] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Processing packet received on port 2
+[14:44:58.702] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Parser 'parser': start
+[14:44:58.702] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Parser 'parser' entering state 'start'
+[14:44:58.702] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Extracting header 'ethernet'
+[14:44:58.702] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Parser state 'start': key is 1234
+[14:44:58.702] [bmv2] [T] [thread 27168] [6.0] [cxt 0] Bytes parsed: 14
+[14:44:58.702] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Parser 'parser' entering state 'parse_srcRouting'
+[14:44:58.702] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Extracting to header stack 0, next header is 4
+[14:44:58.702] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Parser state 'parse_srcRouting': key is 01
+[14:44:58.702] [bmv2] [T] [thread 27168] [6.0] [cxt 0] Bytes parsed: 16
+[14:44:58.702] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Parser 'parser' entering state 'parse_ipv4'
+[14:44:58.702] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Extracting header 'ipv4'
+[14:44:58.702] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Parser state 'parse_ipv4' has no switch, going to default next state
+[14:44:58.702] [bmv2] [T] [thread 27168] [6.0] [cxt 0] Bytes parsed: 36
+[14:44:58.703] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Checksum 'cksum_0': computed 0xd590 - actual 0xd590
+[14:44:58.703] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Verified checksum 'cksum_0': passed
+[14:44:58.703] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Parser 'parser': end
+[14:44:58.703] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Pipeline 'ingress': start
+[14:44:58.703] [bmv2] [T] [thread 27168] [6.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(173) Condition "hdr.ethernet.etherType == TYPE_IPV4 && meta.num == 0" (node_2) is false
+[14:44:58.703] [bmv2] [T] [thread 27168] [6.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(177) Condition "meta.num != (bit<4>)0" (node_4) is false
+[14:44:58.703] [bmv2] [T] [thread 27168] [6.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(279) Condition "hdr.srcRoutes[0].isValid()" (node_58) is true
+[14:44:58.703] [bmv2] [T] [thread 27168] [6.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(280) Condition "hdr.srcRoutes[0].bos == 1" (node_59) is true
+[14:44:58.703] [bmv2] [T] [thread 27168] [6.0] [cxt 0] Applying table 'tbl_srcRoute_finish'
+[14:44:58.703] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Looking up key:
+
+[14:44:58.703] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Table 'tbl_srcRoute_finish': miss
+[14:44:58.703] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Action entry is ingress.srcRoute_finish - 
+[14:44:58.703] [bmv2] [T] [thread 27168] [6.0] [cxt 0] Action ingress.srcRoute_finish
+[14:44:58.703] [bmv2] [T] [thread 27168] [6.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(5) Primitive 0x800; ...
+[14:44:58.703] [bmv2] [T] [thread 27168] [6.0] [cxt 0] Applying table 'tbl_srcRoute_nhop'
+[14:44:58.703] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Looking up key:
+
+[14:44:58.703] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Table 'tbl_srcRoute_nhop': miss
+[14:44:58.703] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Action entry is ingress.srcRoute_nhop - 
+[14:44:58.703] [bmv2] [T] [thread 27168] [6.0] [cxt 0] Action ingress.srcRoute_nhop
+[14:44:58.703] [bmv2] [T] [thread 27168] [6.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(113) Primitive standard_metadata.egress_spec = (bit<9>) hdr.srcRoutes[0].port
+[14:44:58.703] [bmv2] [T] [thread 27168] [6.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(114) Primitive hdr.srcRoutes.pop_front(1)
+[14:44:58.703] [bmv2] [T] [thread 27168] [6.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(284) Condition "hdr.ipv4.isValid()" (node_62) is true
+[14:44:58.703] [bmv2] [T] [thread 27168] [6.0] [cxt 0] Applying table 'tbl_update_ttl'
+[14:44:58.703] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Looking up key:
+
+[14:44:58.703] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Table 'tbl_update_ttl': miss
+[14:44:58.703] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Action entry is ingress.update_ttl - 
+[14:44:58.703] [bmv2] [T] [thread 27168] [6.0] [cxt 0] Action ingress.update_ttl
+[14:44:58.703] [bmv2] [T] [thread 27168] [6.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(122) Primitive hdr.ipv4.ttl = hdr.ipv4.ttl - 1
+[14:44:58.703] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Pipeline 'ingress': end
+[14:44:58.703] [bmv2] [D] [thread 27168] [6.0] [cxt 0] Egress port is 1
+[14:44:58.703] [bmv2] [D] [thread 27170] [6.0] [cxt 0] Pipeline 'egress': start
+[14:44:58.703] [bmv2] [T] [thread 27170] [6.0] [cxt 0] Applying table 'egress.ipv4_final'
+[14:44:58.703] [bmv2] [D] [thread 27170] [6.0] [cxt 0] Looking up key:
+* hdr.ipv4.dstAddr    : 0a000101
+
+[14:44:58.703] [bmv2] [D] [thread 27170] [6.0] [cxt 0] Table 'egress.ipv4_final': hit with handle 0
+[14:44:58.703] [bmv2] [D] [thread 27170] [6.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000101/32
+Action entry: egress.dmac - a000101,
+
+[14:44:58.703] [bmv2] [D] [thread 27170] [6.0] [cxt 0] Action entry is egress.dmac - a000101,
+[14:44:58.703] [bmv2] [T] [thread 27170] [6.0] [cxt 0] Action egress.dmac
+[14:44:58.703] [bmv2] [T] [thread 27170] [6.0] [cxt 0] /home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4(88) Primitive hdr.ethernet.dstAddr = dstAddr
+[14:44:58.703] [bmv2] [D] [thread 27170] [6.0] [cxt 0] Pipeline 'egress': end
+[14:44:58.703] [bmv2] [D] [thread 27170] [6.0] [cxt 0] Deparser 'deparser': start
+[14:44:58.703] [bmv2] [D] [thread 27170] [6.0] [cxt 0] Updating checksum 'cksum'
+[14:44:58.703] [bmv2] [D] [thread 27170] [6.0] [cxt 0] Deparsing header 'ethernet'
+[14:44:58.703] [bmv2] [D] [thread 27170] [6.0] [cxt 0] Deparsing header 'ipv4'
+[14:44:58.703] [bmv2] [D] [thread 27170] [6.0] [cxt 0] Deparser 'deparser': end
+[14:44:58.703] [bmv2] [D] [thread 27173] [6.0] [cxt 0] Transmitting packet of size 98 out of port 1
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory

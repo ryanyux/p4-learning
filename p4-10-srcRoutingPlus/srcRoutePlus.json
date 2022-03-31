@@ -1,0 +1,5332 @@
+{
+  "header_types" : [
+    {
+      "name" : "scalars_0",
+      "id" : 0,
+      "fields" : [
+        ["tmp", 32, false],
+        ["tmp_0", 32, false],
+        ["tmp_1", 32, false],
+        ["tmp_2", 32, false],
+        ["tmp_3", 32, false],
+        ["tmp_4", 32, false],
+        ["tmp_5", 32, false],
+        ["tmp_6", 32, false],
+        ["tmp_7", 32, false],
+        ["tmp_8", 32, false],
+        ["userMetadata.num", 4, false],
+        ["userMetadata.val1", 32, false],
+        ["userMetadata.val2", 32, false],
+        ["_padding_0", 4, false]
+      ]
+    },
+    {
+      "name" : "standard_metadata",
+      "id" : 1,
+      "fields" : [
+        ["ingress_port", 9, false],
+        ["egress_spec", 9, false],
+        ["egress_port", 9, false],
+        ["instance_type", 32, false],
+        ["packet_length", 32, false],
+        ["enq_timestamp", 32, false],
+        ["enq_qdepth", 19, false],
+        ["deq_timedelta", 32, false],
+        ["deq_qdepth", 19, false],
+        ["ingress_global_timestamp", 48, false],
+        ["egress_global_timestamp", 48, false],
+        ["mcast_grp", 16, false],
+        ["egress_rid", 16, false],
+        ["checksum_error", 1, false],
+        ["parser_error", 32, false],
+        ["priority", 3, false],
+        ["_padding", 3, false]
+      ]
+    },
+    {
+      "name" : "ethernet_t",
+      "id" : 2,
+      "fields" : [
+        ["dstAddr", 48, false],
+        ["srcAddr", 48, false],
+        ["etherType", 16, false]
+      ]
+    },
+    {
+      "name" : "ipv4_t",
+      "id" : 3,
+      "fields" : [
+        ["version", 4, false],
+        ["ihl", 4, false],
+        ["diffserv", 8, false],
+        ["totalLen", 16, false],
+        ["identification", 16, false],
+        ["flags", 3, false],
+        ["fragOffset", 13, false],
+        ["ttl", 8, false],
+        ["protocol", 8, false],
+        ["hdrChecksum", 16, false],
+        ["srcAddr", 32, false],
+        ["dstAddr", 32, false]
+      ]
+    },
+    {
+      "name" : "srcRoute_t",
+      "id" : 4,
+      "fields" : [
+        ["bos", 1, false],
+        ["port", 15, false]
+      ]
+    }
+  ],
+  "headers" : [
+    {
+      "name" : "scalars",
+      "id" : 0,
+      "header_type" : "scalars_0",
+      "metadata" : true,
+      "pi_omit" : true
+    },
+    {
+      "name" : "standard_metadata",
+      "id" : 1,
+      "header_type" : "standard_metadata",
+      "metadata" : true,
+      "pi_omit" : true
+    },
+    {
+      "name" : "ethernet",
+      "id" : 2,
+      "header_type" : "ethernet_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "ipv4",
+      "id" : 3,
+      "header_type" : "ipv4_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "srcRoutes[0]",
+      "id" : 4,
+      "header_type" : "srcRoute_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "srcRoutes[1]",
+      "id" : 5,
+      "header_type" : "srcRoute_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "srcRoutes[2]",
+      "id" : 6,
+      "header_type" : "srcRoute_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "srcRoutes[3]",
+      "id" : 7,
+      "header_type" : "srcRoute_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "srcRoutes[4]",
+      "id" : 8,
+      "header_type" : "srcRoute_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "srcRoutes[5]",
+      "id" : 9,
+      "header_type" : "srcRoute_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "srcRoutes[6]",
+      "id" : 10,
+      "header_type" : "srcRoute_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "srcRoutes[7]",
+      "id" : 11,
+      "header_type" : "srcRoute_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "srcRoutes[8]",
+      "id" : 12,
+      "header_type" : "srcRoute_t",
+      "metadata" : false,
+      "pi_omit" : true
+    }
+  ],
+  "header_stacks" : [
+    {
+      "name" : "srcRoutes",
+      "id" : 0,
+      "header_type" : "srcRoute_t",
+      "size" : 9,
+      "header_ids" : [4, 5, 6, 7, 8, 9, 10, 11, 12]
+    }
+  ],
+  "header_union_types" : [],
+  "header_unions" : [],
+  "header_union_stacks" : [],
+  "field_lists" : [],
+  "errors" : [
+    ["NoError", 0],
+    ["PacketTooShort", 1],
+    ["NoMatch", 2],
+    ["StackOutOfBounds", 3],
+    ["HeaderTooShort", 4],
+    ["ParserTimeout", 5],
+    ["ParserInvalidArgument", 6]
+  ],
+  "enums" : [],
+  "parsers" : [
+    {
+      "name" : "parser",
+      "id" : 0,
+      "init_state" : "start",
+      "parse_states" : [
+        {
+          "name" : "start",
+          "id" : 0,
+          "parser_ops" : [
+            {
+              "parameters" : [
+                {
+                  "type" : "regular",
+                  "value" : "ethernet"
+                }
+              ],
+              "op" : "extract"
+            }
+          ],
+          "transitions" : [
+            {
+              "type" : "hexstr",
+              "value" : "0x1234",
+              "mask" : null,
+              "next_state" : "parse_srcRouting"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x0800",
+              "mask" : null,
+              "next_state" : "parse_ipv4"
+            },
+            {
+              "type" : "default",
+              "value" : null,
+              "mask" : null,
+              "next_state" : null
+            }
+          ],
+          "transition_key" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "etherType"]
+            }
+          ]
+        },
+        {
+          "name" : "parse_ipv4",
+          "id" : 1,
+          "parser_ops" : [
+            {
+              "parameters" : [
+                {
+                  "type" : "regular",
+                  "value" : "ipv4"
+                }
+              ],
+              "op" : "extract"
+            }
+          ],
+          "transitions" : [
+            {
+              "type" : "default",
+              "value" : null,
+              "mask" : null,
+              "next_state" : null
+            }
+          ],
+          "transition_key" : []
+        },
+        {
+          "name" : "parse_srcRouting",
+          "id" : 2,
+          "parser_ops" : [
+            {
+              "parameters" : [
+                {
+                  "type" : "stack",
+                  "value" : "srcRoutes"
+                }
+              ],
+              "op" : "extract"
+            }
+          ],
+          "transitions" : [
+            {
+              "type" : "hexstr",
+              "value" : "0x01",
+              "mask" : null,
+              "next_state" : "parse_ipv4"
+            },
+            {
+              "type" : "default",
+              "value" : null,
+              "mask" : null,
+              "next_state" : "parse_srcRouting"
+            }
+          ],
+          "transition_key" : [
+            {
+              "type" : "stack_field",
+              "value" : ["srcRoutes", "bos"]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "parse_vsets" : [],
+  "deparsers" : [
+    {
+      "name" : "deparser",
+      "id" : 0,
+      "source_info" : {
+        "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+        "line" : 291,
+        "column" : 8,
+        "source_fragment" : "DeparserImpl"
+      },
+      "order" : ["ethernet", "srcRoutes[0]", "srcRoutes[1]", "srcRoutes[2]", "srcRoutes[3]", "srcRoutes[4]", "srcRoutes[5]", "srcRoutes[6]", "srcRoutes[7]", "srcRoutes[8]", "ipv4"],
+      "primitives" : []
+    }
+  ],
+  "meter_arrays" : [],
+  "counter_arrays" : [],
+  "register_arrays" : [
+    {
+      "name" : "path",
+      "id" : 0,
+      "source_info" : {
+        "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+        "line" : 10,
+        "column" : 22,
+        "source_fragment" : "path"
+      },
+      "size" : 10,
+      "bitwidth" : 32
+    }
+  ],
+  "calculations" : [
+    {
+      "name" : "calc",
+      "id" : 0,
+      "source_info" : {
+        "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+        "line" : 307,
+        "column" : 8,
+        "source_fragment" : "update_checksum( ..."
+      },
+      "algo" : "csum16",
+      "input" : [
+        {
+          "type" : "field",
+          "value" : ["ipv4", "version"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "ihl"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "diffserv"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "totalLen"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "identification"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "flags"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "fragOffset"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "ttl"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "protocol"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "srcAddr"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "dstAddr"]
+        }
+      ]
+    },
+    {
+      "name" : "calc_0",
+      "id" : 1,
+      "source_info" : {
+        "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+        "line" : 301,
+        "column" : 8,
+        "source_fragment" : "verify_checksum(true, { hdr.ipv4.version, hdr.ipv4.ihl, hdr.ipv4.diffserv, hdr.ipv4.totalLen, hdr.ipv4.identification, hdr.ipv4.flags, hdr.ipv4.fragOffset, hdr.ipv4.ttl, hdr.ipv4.protocol, hdr.ipv4.srcAddr, hdr.ipv4.dstAddr }, hdr.ipv4.hdrChecksum, HashAlgorithm.csum16)"
+      },
+      "algo" : "csum16",
+      "input" : [
+        {
+          "type" : "field",
+          "value" : ["ipv4", "version"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "ihl"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "diffserv"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "totalLen"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "identification"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "flags"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "fragOffset"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "ttl"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "protocol"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "srcAddr"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "dstAddr"]
+        }
+      ]
+    }
+  ],
+  "learn_lists" : [],
+  "actions" : [
+    {
+      "name" : "NoAction",
+      "id" : 0,
+      "runtime_data" : [],
+      "primitives" : []
+    },
+    {
+      "name" : "egress.dmac",
+      "id" : 1,
+      "runtime_data" : [
+        {
+          "name" : "dstAddr",
+          "bitwidth" : 48
+        }
+      ],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "dstAddr"]
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 0
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 88,
+            "column" : 8,
+            "source_fragment" : "hdr.ethernet.dstAddr = dstAddr"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "ingress.srcRoute_nhop",
+      "id" : 2,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["standard_metadata", "egress_spec"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "&",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["srcRoutes[0]", "port"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x01ff"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x01ff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 113,
+            "column" : 8,
+            "source_fragment" : "standard_metadata.egress_spec = (bit<9>) hdr.srcRoutes[0].port"
+          }
+        },
+        {
+          "op" : "pop",
+          "parameters" : [
+            {
+              "type" : "header_stack",
+              "value" : "srcRoutes"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 114,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes.pop_front(1)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "ingress.srcRoute_finish",
+      "id" : 3,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "etherType"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x0800"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 5,
+            "column" : 26,
+            "source_fragment" : "0x800; ..."
+          }
+        }
+      ]
+    },
+    {
+      "name" : "ingress.update_ttl",
+      "id" : 4,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ipv4", "ttl"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["ipv4", "ttl"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0xff"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 122,
+            "column" : 8,
+            "source_fragment" : "hdr.ipv4.ttl = hdr.ipv4.ttl - 1"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "ingress.set_path",
+      "id" : 5,
+      "runtime_data" : [
+        {
+          "name" : "num",
+          "bitwidth" : 4
+        },
+        {
+          "name" : "port1",
+          "bitwidth" : 32
+        },
+        {
+          "name" : "port2",
+          "bitwidth" : 32
+        },
+        {
+          "name" : "port3",
+          "bitwidth" : 32
+        },
+        {
+          "name" : "port4",
+          "bitwidth" : 32
+        },
+        {
+          "name" : "port5",
+          "bitwidth" : 32
+        },
+        {
+          "name" : "port6",
+          "bitwidth" : 32
+        },
+        {
+          "name" : "port7",
+          "bitwidth" : 32
+        },
+        {
+          "name" : "port8",
+          "bitwidth" : 32
+        },
+        {
+          "name" : "port9",
+          "bitwidth" : 32
+        }
+      ],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "local",
+                    "value" : 0
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 136,
+            "column" : 35,
+            "source_fragment" : "(bit<32>)num"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "path"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00000000"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 136,
+            "column" : 12,
+            "source_fragment" : "path.write((bit<32>)0, (bit<32>)num)"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "path"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00000001"
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 1
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 137,
+            "column" : 12,
+            "source_fragment" : "path.write((bit<32>)1, (bit<32>)port1)"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "path"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00000002"
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 2
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 138,
+            "column" : 12,
+            "source_fragment" : "path.write((bit<32>)2, (bit<32>)port2)"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "path"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00000003"
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 3
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 139,
+            "column" : 12,
+            "source_fragment" : "path.write((bit<32>)3, (bit<32>)port3)"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "path"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00000004"
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 4
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 140,
+            "column" : 12,
+            "source_fragment" : "path.write((bit<32>)4, (bit<32>)port4)"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "path"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00000005"
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 5
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 141,
+            "column" : 12,
+            "source_fragment" : "path.write((bit<32>)5, (bit<32>)port5)"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "path"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00000006"
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 6
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 142,
+            "column" : 12,
+            "source_fragment" : "path.write((bit<32>)6, (bit<32>)port6)"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "path"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00000007"
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 7
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 143,
+            "column" : 12,
+            "source_fragment" : "path.write((bit<32>)7, (bit<32>)port7)"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "path"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00000008"
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 8
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 144,
+            "column" : 12,
+            "source_fragment" : "path.write((bit<32>)8, (bit<32>)port8)"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "path"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00000009"
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 9
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 145,
+            "column" : 12,
+            "source_fragment" : "path.write((bit<32>)9, (bit<32>)port9)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.num"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x01"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 146,
+            "column" : 12,
+            "source_fragment" : "meta.num = 1"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "ingress.AddHeader",
+      "id" : 6,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "etherType"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1234"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 6,
+            "column" : 32,
+            "source_fragment" : "0x1234; ..."
+          }
+        },
+        {
+          "op" : "push",
+          "parameters" : [
+            {
+              "type" : "header_stack",
+              "value" : "srcRoutes"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 152,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes.push_front(1)"
+          }
+        },
+        {
+          "op" : "add_header",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "srcRoutes[0]"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 153,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].setValid()"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["srcRoutes[0]", "port"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "&",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "userMetadata.val2"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x00007fff"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x7fff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 154,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].port = port"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["srcRoutes[0]", "bos"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x01"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 155,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].bos = flag"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "ingress.AddHeader",
+      "id" : 7,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "etherType"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1234"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 6,
+            "column" : 32,
+            "source_fragment" : "0x1234; ..."
+          }
+        },
+        {
+          "op" : "push",
+          "parameters" : [
+            {
+              "type" : "header_stack",
+              "value" : "srcRoutes"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 152,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes.push_front(1)"
+          }
+        },
+        {
+          "op" : "add_header",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "srcRoutes[0]"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 153,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].setValid()"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["srcRoutes[0]", "port"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "&",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "userMetadata.val2"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x00007fff"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x7fff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 154,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].port = port"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["srcRoutes[0]", "bos"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 155,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].bos = flag"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "ingress.AddHeader",
+      "id" : 8,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "etherType"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1234"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 6,
+            "column" : 32,
+            "source_fragment" : "0x1234; ..."
+          }
+        },
+        {
+          "op" : "push",
+          "parameters" : [
+            {
+              "type" : "header_stack",
+              "value" : "srcRoutes"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 152,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes.push_front(1)"
+          }
+        },
+        {
+          "op" : "add_header",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "srcRoutes[0]"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 153,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].setValid()"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["srcRoutes[0]", "port"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "&",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "userMetadata.val2"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x00007fff"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x7fff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 154,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].port = port"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["srcRoutes[0]", "bos"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 155,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].bos = flag"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "ingress.AddHeader",
+      "id" : 9,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "etherType"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1234"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 6,
+            "column" : 32,
+            "source_fragment" : "0x1234; ..."
+          }
+        },
+        {
+          "op" : "push",
+          "parameters" : [
+            {
+              "type" : "header_stack",
+              "value" : "srcRoutes"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 152,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes.push_front(1)"
+          }
+        },
+        {
+          "op" : "add_header",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "srcRoutes[0]"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 153,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].setValid()"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["srcRoutes[0]", "port"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "&",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "userMetadata.val2"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x00007fff"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x7fff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 154,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].port = port"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["srcRoutes[0]", "bos"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 155,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].bos = flag"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "ingress.AddHeader",
+      "id" : 10,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "etherType"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1234"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 6,
+            "column" : 32,
+            "source_fragment" : "0x1234; ..."
+          }
+        },
+        {
+          "op" : "push",
+          "parameters" : [
+            {
+              "type" : "header_stack",
+              "value" : "srcRoutes"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 152,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes.push_front(1)"
+          }
+        },
+        {
+          "op" : "add_header",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "srcRoutes[0]"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 153,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].setValid()"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["srcRoutes[0]", "port"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "&",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "userMetadata.val2"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x00007fff"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x7fff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 154,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].port = port"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["srcRoutes[0]", "bos"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 155,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].bos = flag"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "ingress.AddHeader",
+      "id" : 11,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "etherType"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1234"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 6,
+            "column" : 32,
+            "source_fragment" : "0x1234; ..."
+          }
+        },
+        {
+          "op" : "push",
+          "parameters" : [
+            {
+              "type" : "header_stack",
+              "value" : "srcRoutes"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 152,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes.push_front(1)"
+          }
+        },
+        {
+          "op" : "add_header",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "srcRoutes[0]"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 153,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].setValid()"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["srcRoutes[0]", "port"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "&",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "userMetadata.val2"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x00007fff"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x7fff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 154,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].port = port"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["srcRoutes[0]", "bos"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 155,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].bos = flag"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "ingress.AddHeader",
+      "id" : 12,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "etherType"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1234"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 6,
+            "column" : 32,
+            "source_fragment" : "0x1234; ..."
+          }
+        },
+        {
+          "op" : "push",
+          "parameters" : [
+            {
+              "type" : "header_stack",
+              "value" : "srcRoutes"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 152,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes.push_front(1)"
+          }
+        },
+        {
+          "op" : "add_header",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "srcRoutes[0]"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 153,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].setValid()"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["srcRoutes[0]", "port"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "&",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "userMetadata.val2"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x00007fff"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x7fff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 154,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].port = port"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["srcRoutes[0]", "bos"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 155,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].bos = flag"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "ingress.AddHeader",
+      "id" : 13,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "etherType"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1234"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 6,
+            "column" : 32,
+            "source_fragment" : "0x1234; ..."
+          }
+        },
+        {
+          "op" : "push",
+          "parameters" : [
+            {
+              "type" : "header_stack",
+              "value" : "srcRoutes"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 152,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes.push_front(1)"
+          }
+        },
+        {
+          "op" : "add_header",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "srcRoutes[0]"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 153,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].setValid()"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["srcRoutes[0]", "port"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "&",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "userMetadata.val2"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x00007fff"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x7fff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 154,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].port = port"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["srcRoutes[0]", "bos"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 155,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].bos = flag"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "ingress.AddHeader",
+      "id" : 14,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "etherType"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1234"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 6,
+            "column" : 32,
+            "source_fragment" : "0x1234; ..."
+          }
+        },
+        {
+          "op" : "push",
+          "parameters" : [
+            {
+              "type" : "header_stack",
+              "value" : "srcRoutes"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 152,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes.push_front(1)"
+          }
+        },
+        {
+          "op" : "add_header",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "srcRoutes[0]"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 153,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].setValid()"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["srcRoutes[0]", "port"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "&",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "userMetadata.val2"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x00007fff"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x7fff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 154,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].port = port"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["srcRoutes[0]", "bos"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 155,
+            "column" : 8,
+            "source_fragment" : "hdr.srcRoutes[0].bos = flag"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "_drop",
+      "id" : 15,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "mark_to_drop",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "standard_metadata"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 158,
+            "column" : 8,
+            "source_fragment" : "mark_to_drop(standard_metadata)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus179",
+      "id" : 16,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.val1"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "path"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00000000"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 179,
+            "column" : 12,
+            "source_fragment" : "path.read(meta.val1, (bit<32>)0)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_0"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "userMetadata.num"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 181,
+            "column" : 33,
+            "source_fragment" : "(bit<32>)meta.num"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.val2"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "path"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_0"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 181,
+            "column" : 12,
+            "source_fragment" : "path.read(meta.val2, (bit<32>)meta.num)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus184",
+      "id" : 17,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.num"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "userMetadata.num"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x01"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x0f"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 184,
+            "column" : 16,
+            "source_fragment" : "meta.num = meta.num + 1"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus186",
+      "id" : 18,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.num"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x0f"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 186,
+            "column" : 16,
+            "source_fragment" : "meta.num = 15"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus192",
+      "id" : 19,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_1"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "userMetadata.num"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 192,
+            "column" : 37,
+            "source_fragment" : "(bit<32>)meta.num"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.val2"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "path"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_1"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 192,
+            "column" : 16,
+            "source_fragment" : "path.read(meta.val2, (bit<32>)meta.num)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus195",
+      "id" : 20,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.num"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "userMetadata.num"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x01"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x0f"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 195,
+            "column" : 20,
+            "source_fragment" : "meta.num = meta.num + 1"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus197",
+      "id" : 21,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.num"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x0f"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 197,
+            "column" : 20,
+            "source_fragment" : "meta.num = 15"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus203",
+      "id" : 22,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_2"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "userMetadata.num"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 203,
+            "column" : 37,
+            "source_fragment" : "(bit<32>)meta.num"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.val2"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "path"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_2"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 203,
+            "column" : 16,
+            "source_fragment" : "path.read(meta.val2, (bit<32>)meta.num)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus206",
+      "id" : 23,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.num"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "userMetadata.num"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x01"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x0f"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 206,
+            "column" : 20,
+            "source_fragment" : "meta.num = meta.num + 1"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus208",
+      "id" : 24,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.num"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x0f"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 208,
+            "column" : 20,
+            "source_fragment" : "meta.num = 15"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus214",
+      "id" : 25,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_3"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "userMetadata.num"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 214,
+            "column" : 37,
+            "source_fragment" : "(bit<32>)meta.num"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.val2"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "path"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_3"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 214,
+            "column" : 16,
+            "source_fragment" : "path.read(meta.val2, (bit<32>)meta.num)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus217",
+      "id" : 26,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.num"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "userMetadata.num"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x01"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x0f"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 217,
+            "column" : 20,
+            "source_fragment" : "meta.num = meta.num + 1"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus219",
+      "id" : 27,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.num"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x0f"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 219,
+            "column" : 20,
+            "source_fragment" : "meta.num = 15"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus225",
+      "id" : 28,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_4"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "userMetadata.num"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 225,
+            "column" : 37,
+            "source_fragment" : "(bit<32>)meta.num"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.val2"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "path"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_4"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 225,
+            "column" : 16,
+            "source_fragment" : "path.read(meta.val2, (bit<32>)meta.num)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus228",
+      "id" : 29,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.num"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "userMetadata.num"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x01"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x0f"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 228,
+            "column" : 20,
+            "source_fragment" : "meta.num = meta.num + 1"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus230",
+      "id" : 30,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.num"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x0f"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 230,
+            "column" : 20,
+            "source_fragment" : "meta.num = 15"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus236",
+      "id" : 31,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_5"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "userMetadata.num"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 236,
+            "column" : 37,
+            "source_fragment" : "(bit<32>)meta.num"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.val2"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "path"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_5"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 236,
+            "column" : 16,
+            "source_fragment" : "path.read(meta.val2, (bit<32>)meta.num)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus239",
+      "id" : 32,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.num"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "userMetadata.num"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x01"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x0f"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 239,
+            "column" : 20,
+            "source_fragment" : "meta.num = meta.num + 1"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus241",
+      "id" : 33,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.num"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x0f"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 241,
+            "column" : 20,
+            "source_fragment" : "meta.num = 15"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus247",
+      "id" : 34,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_6"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "userMetadata.num"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 247,
+            "column" : 37,
+            "source_fragment" : "(bit<32>)meta.num"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.val2"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "path"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_6"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 247,
+            "column" : 16,
+            "source_fragment" : "path.read(meta.val2, (bit<32>)meta.num)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus250",
+      "id" : 35,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.num"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "userMetadata.num"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x01"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x0f"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 250,
+            "column" : 20,
+            "source_fragment" : "meta.num = meta.num + 1"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus252",
+      "id" : 36,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.num"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x0f"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 252,
+            "column" : 20,
+            "source_fragment" : "meta.num = 15"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus258",
+      "id" : 37,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_7"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "userMetadata.num"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 258,
+            "column" : 37,
+            "source_fragment" : "(bit<32>)meta.num"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.val2"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "path"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_7"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 258,
+            "column" : 16,
+            "source_fragment" : "path.read(meta.val2, (bit<32>)meta.num)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus261",
+      "id" : 38,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.num"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "userMetadata.num"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x01"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x0f"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 261,
+            "column" : 20,
+            "source_fragment" : "meta.num = meta.num + 1"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus263",
+      "id" : 39,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.num"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x0f"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 263,
+            "column" : 20,
+            "source_fragment" : "meta.num = 15"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus269",
+      "id" : 40,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_8"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "userMetadata.num"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 269,
+            "column" : 37,
+            "source_fragment" : "(bit<32>)meta.num"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.val2"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "path"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_8"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 269,
+            "column" : 16,
+            "source_fragment" : "path.read(meta.val2, (bit<32>)meta.num)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus272",
+      "id" : 41,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.num"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "userMetadata.num"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x01"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x0f"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 272,
+            "column" : 20,
+            "source_fragment" : "meta.num = meta.num + 1"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "srcRoutePlus274",
+      "id" : 42,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "userMetadata.num"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x0f"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 274,
+            "column" : 20,
+            "source_fragment" : "meta.num = 15"
+          }
+        }
+      ]
+    }
+  ],
+  "pipelines" : [
+    {
+      "name" : "ingress",
+      "id" : 0,
+      "source_info" : {
+        "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+        "line" : 110,
+        "column" : 8,
+        "source_fragment" : "ingress"
+      },
+      "init_table" : "node_2",
+      "tables" : [
+        {
+          "name" : "ingress.ipv4_lpm",
+          "id" : 0,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 160,
+            "column" : 10,
+            "source_fragment" : "ipv4_lpm"
+          },
+          "key" : [
+            {
+              "match_type" : "lpm",
+              "name" : "hdr.ipv4.dstAddr",
+              "target" : ["ipv4", "dstAddr"],
+              "mask" : null
+            }
+          ],
+          "match_type" : "lpm",
+          "type" : "simple",
+          "max_size" : 512,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [5, 15],
+          "actions" : ["ingress.set_path", "_drop"],
+          "base_default_next" : "node_4",
+          "next_tables" : {
+            "ingress.set_path" : "node_4",
+            "_drop" : "node_4"
+          },
+          "default_entry" : {
+            "action_id" : 15,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus179",
+          "id" : 1,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 179,
+            "column" : 12,
+            "source_fragment" : "path.read(meta.val1, (bit<32>)0); ..."
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [16],
+          "actions" : ["srcRoutePlus179"],
+          "base_default_next" : "tbl_AddHeader",
+          "next_tables" : {
+            "srcRoutePlus179" : "tbl_AddHeader"
+          },
+          "default_entry" : {
+            "action_id" : 16,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_AddHeader",
+          "id" : 2,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 182,
+            "column" : 12,
+            "source_fragment" : "AddHeader((bit<15>)meta.val2, 1)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [6],
+          "actions" : ["ingress.AddHeader"],
+          "base_default_next" : "node_7",
+          "next_tables" : {
+            "ingress.AddHeader" : "node_7"
+          },
+          "default_entry" : {
+            "action_id" : 6,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus184",
+          "id" : 3,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 184,
+            "column" : 25,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [17],
+          "actions" : ["srcRoutePlus184"],
+          "base_default_next" : "node_10",
+          "next_tables" : {
+            "srcRoutePlus184" : "node_10"
+          },
+          "default_entry" : {
+            "action_id" : 17,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus186",
+          "id" : 4,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 186,
+            "column" : 25,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [18],
+          "actions" : ["srcRoutePlus186"],
+          "base_default_next" : "node_10",
+          "next_tables" : {
+            "srcRoutePlus186" : "node_10"
+          },
+          "default_entry" : {
+            "action_id" : 18,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus192",
+          "id" : 5,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 192,
+            "column" : 16,
+            "source_fragment" : "path.read(meta.val2, (bit<32>)meta.num)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [19],
+          "actions" : ["srcRoutePlus192"],
+          "base_default_next" : "tbl_AddHeader_0",
+          "next_tables" : {
+            "srcRoutePlus192" : "tbl_AddHeader_0"
+          },
+          "default_entry" : {
+            "action_id" : 19,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_AddHeader_0",
+          "id" : 6,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 193,
+            "column" : 16,
+            "source_fragment" : "AddHeader((bit<15>)meta.val2, 0)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [7],
+          "actions" : ["ingress.AddHeader"],
+          "base_default_next" : "node_13",
+          "next_tables" : {
+            "ingress.AddHeader" : "node_13"
+          },
+          "default_entry" : {
+            "action_id" : 7,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus195",
+          "id" : 7,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 195,
+            "column" : 29,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [20],
+          "actions" : ["srcRoutePlus195"],
+          "base_default_next" : "node_16",
+          "next_tables" : {
+            "srcRoutePlus195" : "node_16"
+          },
+          "default_entry" : {
+            "action_id" : 20,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus197",
+          "id" : 8,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 197,
+            "column" : 29,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [21],
+          "actions" : ["srcRoutePlus197"],
+          "base_default_next" : "node_16",
+          "next_tables" : {
+            "srcRoutePlus197" : "node_16"
+          },
+          "default_entry" : {
+            "action_id" : 21,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus203",
+          "id" : 9,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 203,
+            "column" : 16,
+            "source_fragment" : "path.read(meta.val2, (bit<32>)meta.num)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [22],
+          "actions" : ["srcRoutePlus203"],
+          "base_default_next" : "tbl_AddHeader_1",
+          "next_tables" : {
+            "srcRoutePlus203" : "tbl_AddHeader_1"
+          },
+          "default_entry" : {
+            "action_id" : 22,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_AddHeader_1",
+          "id" : 10,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 204,
+            "column" : 16,
+            "source_fragment" : "AddHeader((bit<15>)meta.val2, 0)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [8],
+          "actions" : ["ingress.AddHeader"],
+          "base_default_next" : "node_19",
+          "next_tables" : {
+            "ingress.AddHeader" : "node_19"
+          },
+          "default_entry" : {
+            "action_id" : 8,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus206",
+          "id" : 11,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 206,
+            "column" : 29,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [23],
+          "actions" : ["srcRoutePlus206"],
+          "base_default_next" : "node_22",
+          "next_tables" : {
+            "srcRoutePlus206" : "node_22"
+          },
+          "default_entry" : {
+            "action_id" : 23,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus208",
+          "id" : 12,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 208,
+            "column" : 29,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [24],
+          "actions" : ["srcRoutePlus208"],
+          "base_default_next" : "node_22",
+          "next_tables" : {
+            "srcRoutePlus208" : "node_22"
+          },
+          "default_entry" : {
+            "action_id" : 24,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus214",
+          "id" : 13,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 214,
+            "column" : 16,
+            "source_fragment" : "path.read(meta.val2, (bit<32>)meta.num)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [25],
+          "actions" : ["srcRoutePlus214"],
+          "base_default_next" : "tbl_AddHeader_2",
+          "next_tables" : {
+            "srcRoutePlus214" : "tbl_AddHeader_2"
+          },
+          "default_entry" : {
+            "action_id" : 25,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_AddHeader_2",
+          "id" : 14,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 215,
+            "column" : 16,
+            "source_fragment" : "AddHeader((bit<15>)meta.val2, 0)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [9],
+          "actions" : ["ingress.AddHeader"],
+          "base_default_next" : "node_25",
+          "next_tables" : {
+            "ingress.AddHeader" : "node_25"
+          },
+          "default_entry" : {
+            "action_id" : 9,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus217",
+          "id" : 15,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 217,
+            "column" : 29,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [26],
+          "actions" : ["srcRoutePlus217"],
+          "base_default_next" : "node_28",
+          "next_tables" : {
+            "srcRoutePlus217" : "node_28"
+          },
+          "default_entry" : {
+            "action_id" : 26,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus219",
+          "id" : 16,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 219,
+            "column" : 29,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [27],
+          "actions" : ["srcRoutePlus219"],
+          "base_default_next" : "node_28",
+          "next_tables" : {
+            "srcRoutePlus219" : "node_28"
+          },
+          "default_entry" : {
+            "action_id" : 27,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus225",
+          "id" : 17,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 225,
+            "column" : 16,
+            "source_fragment" : "path.read(meta.val2, (bit<32>)meta.num)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [28],
+          "actions" : ["srcRoutePlus225"],
+          "base_default_next" : "tbl_AddHeader_3",
+          "next_tables" : {
+            "srcRoutePlus225" : "tbl_AddHeader_3"
+          },
+          "default_entry" : {
+            "action_id" : 28,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_AddHeader_3",
+          "id" : 18,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 226,
+            "column" : 16,
+            "source_fragment" : "AddHeader((bit<15>)meta.val2, 0)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [10],
+          "actions" : ["ingress.AddHeader"],
+          "base_default_next" : "node_31",
+          "next_tables" : {
+            "ingress.AddHeader" : "node_31"
+          },
+          "default_entry" : {
+            "action_id" : 10,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus228",
+          "id" : 19,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 228,
+            "column" : 29,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [29],
+          "actions" : ["srcRoutePlus228"],
+          "base_default_next" : "node_34",
+          "next_tables" : {
+            "srcRoutePlus228" : "node_34"
+          },
+          "default_entry" : {
+            "action_id" : 29,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus230",
+          "id" : 20,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 230,
+            "column" : 29,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [30],
+          "actions" : ["srcRoutePlus230"],
+          "base_default_next" : "node_34",
+          "next_tables" : {
+            "srcRoutePlus230" : "node_34"
+          },
+          "default_entry" : {
+            "action_id" : 30,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus236",
+          "id" : 21,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 236,
+            "column" : 16,
+            "source_fragment" : "path.read(meta.val2, (bit<32>)meta.num)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [31],
+          "actions" : ["srcRoutePlus236"],
+          "base_default_next" : "tbl_AddHeader_4",
+          "next_tables" : {
+            "srcRoutePlus236" : "tbl_AddHeader_4"
+          },
+          "default_entry" : {
+            "action_id" : 31,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_AddHeader_4",
+          "id" : 22,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 237,
+            "column" : 16,
+            "source_fragment" : "AddHeader((bit<15>)meta.val2, 0)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [11],
+          "actions" : ["ingress.AddHeader"],
+          "base_default_next" : "node_37",
+          "next_tables" : {
+            "ingress.AddHeader" : "node_37"
+          },
+          "default_entry" : {
+            "action_id" : 11,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus239",
+          "id" : 23,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 239,
+            "column" : 29,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [32],
+          "actions" : ["srcRoutePlus239"],
+          "base_default_next" : "node_40",
+          "next_tables" : {
+            "srcRoutePlus239" : "node_40"
+          },
+          "default_entry" : {
+            "action_id" : 32,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus241",
+          "id" : 24,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 241,
+            "column" : 29,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [33],
+          "actions" : ["srcRoutePlus241"],
+          "base_default_next" : "node_40",
+          "next_tables" : {
+            "srcRoutePlus241" : "node_40"
+          },
+          "default_entry" : {
+            "action_id" : 33,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus247",
+          "id" : 25,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 247,
+            "column" : 16,
+            "source_fragment" : "path.read(meta.val2, (bit<32>)meta.num)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [34],
+          "actions" : ["srcRoutePlus247"],
+          "base_default_next" : "tbl_AddHeader_5",
+          "next_tables" : {
+            "srcRoutePlus247" : "tbl_AddHeader_5"
+          },
+          "default_entry" : {
+            "action_id" : 34,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_AddHeader_5",
+          "id" : 26,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 248,
+            "column" : 16,
+            "source_fragment" : "AddHeader((bit<15>)meta.val2, 0)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [12],
+          "actions" : ["ingress.AddHeader"],
+          "base_default_next" : "node_43",
+          "next_tables" : {
+            "ingress.AddHeader" : "node_43"
+          },
+          "default_entry" : {
+            "action_id" : 12,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus250",
+          "id" : 27,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 250,
+            "column" : 29,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [35],
+          "actions" : ["srcRoutePlus250"],
+          "base_default_next" : "node_46",
+          "next_tables" : {
+            "srcRoutePlus250" : "node_46"
+          },
+          "default_entry" : {
+            "action_id" : 35,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus252",
+          "id" : 28,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 252,
+            "column" : 29,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [36],
+          "actions" : ["srcRoutePlus252"],
+          "base_default_next" : "node_46",
+          "next_tables" : {
+            "srcRoutePlus252" : "node_46"
+          },
+          "default_entry" : {
+            "action_id" : 36,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus258",
+          "id" : 29,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 258,
+            "column" : 16,
+            "source_fragment" : "path.read(meta.val2, (bit<32>)meta.num)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [37],
+          "actions" : ["srcRoutePlus258"],
+          "base_default_next" : "tbl_AddHeader_6",
+          "next_tables" : {
+            "srcRoutePlus258" : "tbl_AddHeader_6"
+          },
+          "default_entry" : {
+            "action_id" : 37,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_AddHeader_6",
+          "id" : 30,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 259,
+            "column" : 16,
+            "source_fragment" : "AddHeader((bit<15>)meta.val2, 0)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [13],
+          "actions" : ["ingress.AddHeader"],
+          "base_default_next" : "node_49",
+          "next_tables" : {
+            "ingress.AddHeader" : "node_49"
+          },
+          "default_entry" : {
+            "action_id" : 13,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus261",
+          "id" : 31,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 261,
+            "column" : 29,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [38],
+          "actions" : ["srcRoutePlus261"],
+          "base_default_next" : "node_52",
+          "next_tables" : {
+            "srcRoutePlus261" : "node_52"
+          },
+          "default_entry" : {
+            "action_id" : 38,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus263",
+          "id" : 32,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 263,
+            "column" : 29,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [39],
+          "actions" : ["srcRoutePlus263"],
+          "base_default_next" : "node_52",
+          "next_tables" : {
+            "srcRoutePlus263" : "node_52"
+          },
+          "default_entry" : {
+            "action_id" : 39,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus269",
+          "id" : 33,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 269,
+            "column" : 16,
+            "source_fragment" : "path.read(meta.val2, (bit<32>)meta.num)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [40],
+          "actions" : ["srcRoutePlus269"],
+          "base_default_next" : "tbl_AddHeader_7",
+          "next_tables" : {
+            "srcRoutePlus269" : "tbl_AddHeader_7"
+          },
+          "default_entry" : {
+            "action_id" : 40,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_AddHeader_7",
+          "id" : 34,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 270,
+            "column" : 16,
+            "source_fragment" : "AddHeader((bit<15>)meta.val2, 0)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [14],
+          "actions" : ["ingress.AddHeader"],
+          "base_default_next" : "node_55",
+          "next_tables" : {
+            "ingress.AddHeader" : "node_55"
+          },
+          "default_entry" : {
+            "action_id" : 14,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus272",
+          "id" : 35,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 272,
+            "column" : 29,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [41],
+          "actions" : ["srcRoutePlus272"],
+          "base_default_next" : "node_58",
+          "next_tables" : {
+            "srcRoutePlus272" : "node_58"
+          },
+          "default_entry" : {
+            "action_id" : 41,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoutePlus274",
+          "id" : 36,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 274,
+            "column" : 29,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [42],
+          "actions" : ["srcRoutePlus274"],
+          "base_default_next" : "node_58",
+          "next_tables" : {
+            "srcRoutePlus274" : "node_58"
+          },
+          "default_entry" : {
+            "action_id" : 42,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoute_finish",
+          "id" : 37,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 281,
+            "column" : 16,
+            "source_fragment" : "srcRoute_finish()"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [3],
+          "actions" : ["ingress.srcRoute_finish"],
+          "base_default_next" : "tbl_srcRoute_nhop",
+          "next_tables" : {
+            "ingress.srcRoute_finish" : "tbl_srcRoute_nhop"
+          },
+          "default_entry" : {
+            "action_id" : 3,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_srcRoute_nhop",
+          "id" : 38,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 283,
+            "column" : 12,
+            "source_fragment" : "srcRoute_nhop()"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [2],
+          "actions" : ["ingress.srcRoute_nhop"],
+          "base_default_next" : "node_62",
+          "next_tables" : {
+            "ingress.srcRoute_nhop" : "node_62"
+          },
+          "default_entry" : {
+            "action_id" : 2,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_update_ttl",
+          "id" : 39,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 285,
+            "column" : 16,
+            "source_fragment" : "update_ttl()"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [4],
+          "actions" : ["ingress.update_ttl"],
+          "base_default_next" : null,
+          "next_tables" : {
+            "ingress.update_ttl" : null
+          },
+          "default_entry" : {
+            "action_id" : 4,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        }
+      ],
+      "action_profiles" : [],
+      "conditionals" : [
+        {
+          "name" : "node_2",
+          "id" : 0,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 173,
+            "column" : 12,
+            "source_fragment" : "hdr.ethernet.etherType == TYPE_IPV4 && meta.num == 0"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "and",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "==",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["ethernet", "etherType"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x0800"
+                  }
+                }
+              },
+              "right" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "==",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "userMetadata.num"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x00"
+                  }
+                }
+              }
+            }
+          },
+          "true_next" : "ingress.ipv4_lpm",
+          "false_next" : "node_4"
+        },
+        {
+          "name" : "node_4",
+          "id" : 1,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 177,
+            "column" : 11,
+            "source_fragment" : "meta.num != (bit<4>)0"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "!=",
+              "left" : {
+                "type" : "field",
+                "value" : ["scalars", "userMetadata.num"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x00"
+              }
+            }
+          },
+          "true_next" : "tbl_srcRoutePlus179",
+          "false_next" : "node_58"
+        },
+        {
+          "name" : "node_7",
+          "id" : 2,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 183,
+            "column" : 15,
+            "source_fragment" : "(bit<32>)meta.num != meta.val1"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "!=",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "userMetadata.num"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              },
+              "right" : {
+                "type" : "field",
+                "value" : ["scalars", "userMetadata.val1"]
+              }
+            }
+          },
+          "true_next" : "tbl_srcRoutePlus184",
+          "false_next" : "tbl_srcRoutePlus186"
+        },
+        {
+          "name" : "node_10",
+          "id" : 3,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 191,
+            "column" : 15,
+            "source_fragment" : "meta.num != 15"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "!=",
+              "left" : {
+                "type" : "field",
+                "value" : ["scalars", "userMetadata.num"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x0f"
+              }
+            }
+          },
+          "true_next" : "tbl_srcRoutePlus192",
+          "false_next" : "node_16"
+        },
+        {
+          "name" : "node_13",
+          "id" : 4,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 194,
+            "column" : 19,
+            "source_fragment" : "(bit<32>)meta.num != meta.val1"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "!=",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "userMetadata.num"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              },
+              "right" : {
+                "type" : "field",
+                "value" : ["scalars", "userMetadata.val1"]
+              }
+            }
+          },
+          "true_next" : "tbl_srcRoutePlus195",
+          "false_next" : "tbl_srcRoutePlus197"
+        },
+        {
+          "name" : "node_16",
+          "id" : 5,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 202,
+            "column" : 15,
+            "source_fragment" : "meta.num != 15"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "!=",
+              "left" : {
+                "type" : "field",
+                "value" : ["scalars", "userMetadata.num"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x0f"
+              }
+            }
+          },
+          "true_next" : "tbl_srcRoutePlus203",
+          "false_next" : "node_22"
+        },
+        {
+          "name" : "node_19",
+          "id" : 6,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 205,
+            "column" : 19,
+            "source_fragment" : "(bit<32>)meta.num != meta.val1"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "!=",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "userMetadata.num"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              },
+              "right" : {
+                "type" : "field",
+                "value" : ["scalars", "userMetadata.val1"]
+              }
+            }
+          },
+          "true_next" : "tbl_srcRoutePlus206",
+          "false_next" : "tbl_srcRoutePlus208"
+        },
+        {
+          "name" : "node_22",
+          "id" : 7,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 213,
+            "column" : 15,
+            "source_fragment" : "meta.num != 15"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "!=",
+              "left" : {
+                "type" : "field",
+                "value" : ["scalars", "userMetadata.num"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x0f"
+              }
+            }
+          },
+          "true_next" : "tbl_srcRoutePlus214",
+          "false_next" : "node_28"
+        },
+        {
+          "name" : "node_25",
+          "id" : 8,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 216,
+            "column" : 19,
+            "source_fragment" : "(bit<32>)meta.num != meta.val1"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "!=",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "userMetadata.num"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              },
+              "right" : {
+                "type" : "field",
+                "value" : ["scalars", "userMetadata.val1"]
+              }
+            }
+          },
+          "true_next" : "tbl_srcRoutePlus217",
+          "false_next" : "tbl_srcRoutePlus219"
+        },
+        {
+          "name" : "node_28",
+          "id" : 9,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 224,
+            "column" : 15,
+            "source_fragment" : "meta.num != 15"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "!=",
+              "left" : {
+                "type" : "field",
+                "value" : ["scalars", "userMetadata.num"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x0f"
+              }
+            }
+          },
+          "true_next" : "tbl_srcRoutePlus225",
+          "false_next" : "node_34"
+        },
+        {
+          "name" : "node_31",
+          "id" : 10,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 227,
+            "column" : 19,
+            "source_fragment" : "(bit<32>)meta.num != meta.val1"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "!=",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "userMetadata.num"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              },
+              "right" : {
+                "type" : "field",
+                "value" : ["scalars", "userMetadata.val1"]
+              }
+            }
+          },
+          "true_next" : "tbl_srcRoutePlus228",
+          "false_next" : "tbl_srcRoutePlus230"
+        },
+        {
+          "name" : "node_34",
+          "id" : 11,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 235,
+            "column" : 15,
+            "source_fragment" : "meta.num != 15"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "!=",
+              "left" : {
+                "type" : "field",
+                "value" : ["scalars", "userMetadata.num"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x0f"
+              }
+            }
+          },
+          "true_next" : "tbl_srcRoutePlus236",
+          "false_next" : "node_40"
+        },
+        {
+          "name" : "node_37",
+          "id" : 12,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 238,
+            "column" : 19,
+            "source_fragment" : "(bit<32>)meta.num != meta.val1"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "!=",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "userMetadata.num"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              },
+              "right" : {
+                "type" : "field",
+                "value" : ["scalars", "userMetadata.val1"]
+              }
+            }
+          },
+          "true_next" : "tbl_srcRoutePlus239",
+          "false_next" : "tbl_srcRoutePlus241"
+        },
+        {
+          "name" : "node_40",
+          "id" : 13,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 246,
+            "column" : 15,
+            "source_fragment" : "meta.num != 15"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "!=",
+              "left" : {
+                "type" : "field",
+                "value" : ["scalars", "userMetadata.num"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x0f"
+              }
+            }
+          },
+          "true_next" : "tbl_srcRoutePlus247",
+          "false_next" : "node_46"
+        },
+        {
+          "name" : "node_43",
+          "id" : 14,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 249,
+            "column" : 19,
+            "source_fragment" : "(bit<32>)meta.num != meta.val1"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "!=",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "userMetadata.num"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              },
+              "right" : {
+                "type" : "field",
+                "value" : ["scalars", "userMetadata.val1"]
+              }
+            }
+          },
+          "true_next" : "tbl_srcRoutePlus250",
+          "false_next" : "tbl_srcRoutePlus252"
+        },
+        {
+          "name" : "node_46",
+          "id" : 15,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 257,
+            "column" : 15,
+            "source_fragment" : "meta.num != 15"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "!=",
+              "left" : {
+                "type" : "field",
+                "value" : ["scalars", "userMetadata.num"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x0f"
+              }
+            }
+          },
+          "true_next" : "tbl_srcRoutePlus258",
+          "false_next" : "node_52"
+        },
+        {
+          "name" : "node_49",
+          "id" : 16,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 260,
+            "column" : 19,
+            "source_fragment" : "(bit<32>)meta.num != meta.val1"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "!=",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "userMetadata.num"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              },
+              "right" : {
+                "type" : "field",
+                "value" : ["scalars", "userMetadata.val1"]
+              }
+            }
+          },
+          "true_next" : "tbl_srcRoutePlus261",
+          "false_next" : "tbl_srcRoutePlus263"
+        },
+        {
+          "name" : "node_52",
+          "id" : 17,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 268,
+            "column" : 15,
+            "source_fragment" : "meta.num != 15"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "!=",
+              "left" : {
+                "type" : "field",
+                "value" : ["scalars", "userMetadata.num"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x0f"
+              }
+            }
+          },
+          "true_next" : "tbl_srcRoutePlus269",
+          "false_next" : "node_58"
+        },
+        {
+          "name" : "node_55",
+          "id" : 18,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 271,
+            "column" : 19,
+            "source_fragment" : "(bit<32>)meta.num != meta.val1"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "!=",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "userMetadata.num"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              },
+              "right" : {
+                "type" : "field",
+                "value" : ["scalars", "userMetadata.val1"]
+              }
+            }
+          },
+          "true_next" : "tbl_srcRoutePlus272",
+          "false_next" : "tbl_srcRoutePlus274"
+        },
+        {
+          "name" : "node_58",
+          "id" : 19,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 279,
+            "column" : 11,
+            "source_fragment" : "hdr.srcRoutes[0].isValid()"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "d2b",
+              "left" : null,
+              "right" : {
+                "type" : "field",
+                "value" : ["srcRoutes[0]", "$valid$"]
+              }
+            }
+          },
+          "false_next" : null,
+          "true_next" : "node_59"
+        },
+        {
+          "name" : "node_59",
+          "id" : 20,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 280,
+            "column" : 16,
+            "source_fragment" : "hdr.srcRoutes[0].bos == 1"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "==",
+              "left" : {
+                "type" : "field",
+                "value" : ["srcRoutes[0]", "bos"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x01"
+              }
+            }
+          },
+          "true_next" : "tbl_srcRoute_finish",
+          "false_next" : "tbl_srcRoute_nhop"
+        },
+        {
+          "name" : "node_62",
+          "id" : 21,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 284,
+            "column" : 15,
+            "source_fragment" : "hdr.ipv4.isValid()"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "d2b",
+              "left" : null,
+              "right" : {
+                "type" : "field",
+                "value" : ["ipv4", "$valid$"]
+              }
+            }
+          },
+          "false_next" : null,
+          "true_next" : "tbl_update_ttl"
+        }
+      ]
+    },
+    {
+      "name" : "egress",
+      "id" : 1,
+      "source_info" : {
+        "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+        "line" : 85,
+        "column" : 8,
+        "source_fragment" : "egress"
+      },
+      "init_table" : "egress.ipv4_final",
+      "tables" : [
+        {
+          "name" : "egress.ipv4_final",
+          "id" : 40,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+            "line" : 91,
+            "column" : 10,
+            "source_fragment" : "ipv4_final"
+          },
+          "key" : [
+            {
+              "match_type" : "lpm",
+              "name" : "hdr.ipv4.dstAddr",
+              "target" : ["ipv4", "dstAddr"],
+              "mask" : null
+            }
+          ],
+          "match_type" : "lpm",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [1, 0],
+          "actions" : ["egress.dmac", "NoAction"],
+          "base_default_next" : null,
+          "next_tables" : {
+            "egress.dmac" : null,
+            "NoAction" : null
+          },
+          "default_entry" : {
+            "action_id" : 0,
+            "action_const" : false,
+            "action_data" : [],
+            "action_entry_const" : false
+          }
+        }
+      ],
+      "action_profiles" : [],
+      "conditionals" : []
+    }
+  ],
+  "checksums" : [
+    {
+      "name" : "cksum",
+      "id" : 0,
+      "source_info" : {
+        "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+        "line" : 307,
+        "column" : 8,
+        "source_fragment" : "update_checksum( ..."
+      },
+      "target" : ["ipv4", "hdrChecksum"],
+      "type" : "generic",
+      "calculation" : "calc",
+      "verify" : false,
+      "update" : true,
+      "if_cond" : {
+        "type" : "bool",
+        "value" : true
+      }
+    },
+    {
+      "name" : "cksum_0",
+      "id" : 1,
+      "source_info" : {
+        "filename" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4",
+        "line" : 301,
+        "column" : 8,
+        "source_fragment" : "verify_checksum(true, { hdr.ipv4.version, hdr.ipv4.ihl, hdr.ipv4.diffserv, hdr.ipv4.totalLen, hdr.ipv4.identification, hdr.ipv4.flags, hdr.ipv4.fragOffset, hdr.ipv4.ttl, hdr.ipv4.protocol, hdr.ipv4.srcAddr, hdr.ipv4.dstAddr }, hdr.ipv4.hdrChecksum, HashAlgorithm.csum16)"
+      },
+      "target" : ["ipv4", "hdrChecksum"],
+      "type" : "generic",
+      "calculation" : "calc_0",
+      "verify" : true,
+      "update" : false,
+      "if_cond" : {
+        "type" : "bool",
+        "value" : true
+      }
+    }
+  ],
+  "force_arith" : [],
+  "extern_instances" : [],
+  "field_aliases" : [
+    [
+      "queueing_metadata.enq_timestamp",
+      ["standard_metadata", "enq_timestamp"]
+    ],
+    [
+      "queueing_metadata.enq_qdepth",
+      ["standard_metadata", "enq_qdepth"]
+    ],
+    [
+      "queueing_metadata.deq_timedelta",
+      ["standard_metadata", "deq_timedelta"]
+    ],
+    [
+      "queueing_metadata.deq_qdepth",
+      ["standard_metadata", "deq_qdepth"]
+    ],
+    [
+      "intrinsic_metadata.ingress_global_timestamp",
+      ["standard_metadata", "ingress_global_timestamp"]
+    ],
+    [
+      "intrinsic_metadata.egress_global_timestamp",
+      ["standard_metadata", "egress_global_timestamp"]
+    ],
+    [
+      "intrinsic_metadata.mcast_grp",
+      ["standard_metadata", "mcast_grp"]
+    ],
+    [
+      "intrinsic_metadata.egress_rid",
+      ["standard_metadata", "egress_rid"]
+    ],
+    [
+      "intrinsic_metadata.priority",
+      ["standard_metadata", "priority"]
+    ]
+  ],
+  "program" : "/home/parallels/Desktop/minicode/p4-10-srcRoutingPlus/srcRoutePlus.p4i",
+  "__meta__" : {
+    "version" : [2, 23],
+    "compiler" : "https://github.com/p4lang/p4c"
+  }
+}

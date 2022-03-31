@@ -1,0 +1,117 @@
+{
+  "p4_src": "srcRoutePlus.p4",
+  "switch": "simple_switch",
+  "compiler": "p4c",
+  "options": "--target bmv2 --arch v1model --std p4-16",
+  "switch_cli": "simple_switch_CLI",
+  "cli": true,
+  "pcap_dump": false,
+  "enable_log": true,
+  "topo_module": {
+    "file_path": "",
+    "module_name": "p4utils.mininetlib.apptopo",
+    "object_name": "AppTopoStrategies"
+  },
+  "controller_module": null,
+  "topodb_module": {
+    "file_path": "",
+    "module_name": "p4utils.utils.topology",
+    "object_name": "Topology"
+  },
+  "mininet_module": {
+    "file_path": "",
+    "module_name": "p4utils.mininetlib.net",
+    "object_name": "P4Mininet"
+  },
+  "topology": {
+    "assignment_strategy": "l2",
+    "default": {
+      "auto_arp_tables": "true",
+      "auto_gw_arp": "true"
+    },
+    "links": [
+      [
+        "h257",
+        "s4",
+        {
+          "port1": 0,
+          "port2": 1
+        }
+      ],
+      [
+        "s4",
+        "s2",
+        {
+          "port1": 2,
+          "port2": 1
+        }
+      ],
+      [
+        "s2",
+        "s3",
+        {
+          "port1": 2,
+          "port2": 1
+        }
+      ],
+      [
+        "s1",
+        "s2",
+        {
+          "port1": 1,
+          "port2": 3
+        }
+      ],
+      [
+        "s1",
+        "s3",
+        {
+          "port1": 2,
+          "port2": 2
+        }
+      ],
+      [
+        "s3",
+        "s5",
+        {
+          "port1": 3,
+          "port2": 1
+        }
+      ],
+      [
+        "s5",
+        "h513",
+        {
+          "port1": 2,
+          "port2": 0
+        }
+      ]
+    ],
+    "hosts": {
+      "h257": {},
+      "h513": {}
+    },
+    "switches": {
+      "s1": {
+        "cli_input": "cmd.txt",
+        "p4_src": "srcRoutePlus.p4"
+      },
+      "s2": {
+        "cli_input": "cmd.txt",
+        "p4_src": "srcRoutePlus.p4"
+      },
+      "s3": {
+        "cli_input": "cmd.txt",
+        "p4_src": "srcRoutePlus.p4"
+      },
+      "s4": {
+        "cli_input": "cmd4.txt",
+        "p4_src": "srcRoutePlus.p4"
+      },
+      "s5": {
+        "cli_input": "cmd5.txt",
+        "p4_src": "srcRoutePlus.p4"
+      }
+    }
+  }
+}
