@@ -1,0 +1,75 @@
+{
+    "p4_src": "ecmp.p4",
+    "cli": true,
+    "pcap_dump": false,
+    "enable_log": false,
+    "topology": {
+        "assignment_strategy": "mixed",
+        "links": [
+            [
+                "h1",
+                "s1"
+            ],
+            [
+                "h2",
+                "s6"
+            ],
+            [
+                "s1",
+                "s2"
+            ],
+            [
+                "s1",
+                "s3"
+            ],
+            [
+                "s1",
+                "s4"
+            ],
+            [
+                "s1",
+                "s5"
+            ],
+            [
+                "s2",
+                "s6"
+            ],
+            [
+                "s3",
+                "s6"
+            ],
+            [
+                "s4",
+                "s6"
+            ],
+            [
+                "s5",
+                "s6"
+            ]
+        ],
+        "hosts": {
+            "h1": {},
+            "h2": {}
+        },
+        "switches": {
+            "s1": {
+                "cli_input": "cmd1.txt"
+            },
+            "s2": {
+                "cli_input": "cmd2.txt"
+            },
+            "s3": {
+                "cli_input": "cmd3.txt"
+            },
+            "s4": {
+                "cli_input": "cmd4.txt"
+            },
+            "s5": {
+                "cli_input": "cmd5.txt"
+            },
+            "s6": {
+                "cli_input": "cmd6.txt"
+            }
+        }
+    }
+}
