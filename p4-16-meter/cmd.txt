@@ -1,0 +1,7 @@
+table_add ipv4_lpm forward 10.1.1.2/32 => 00:00:0a:01:01:02 1
+table_add ipv4_lpm forward 10.1.2.2/32 => 00:00:0a:01:02:02 2
+
+table_add m_table m_action 00:00:0a:01:02:02 =>2
+table_add m_filter NoAction 0 =>
+
+meter_set_rates my_meter 2 0.0001:1 0 0.0005:1
