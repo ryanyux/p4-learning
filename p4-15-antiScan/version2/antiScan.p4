@@ -55,9 +55,6 @@ struct headers {
 
 
 struct metadata {
-    bit<10> flowHash;
-    bit<10> syn_cnt;
-    bit<10> syn_ack_cnt;
 }
 
 /*************************************************************************
@@ -88,18 +85,12 @@ parser MyParser(packet_in packet,
         log_msg("PROTOCOL {}",{hdr.ipv4.protocol});
         transition select(hdr.ipv4.protocol){
             TCP:        parse_tcp;
-            UDP:        parse_udp;
             default:    accept;
         }
     }
 
     state parse_tcp {
         packet.extract(hdr.tcp);
-        transition accept;
-    }
-
-    state parse_udp {
-        packet.extract(hdr.udp);
         transition accept;
     }
 }
@@ -139,20 +130,6 @@ control MyIngress(inout headers hdr,
 
     }
 
-    action add_syn_cnt(){
-        hash(meta.flowHash,HashAlgorithm.crc16,16w0,{hdr.ipv4.srcAddr},32w100);
-        syn_cnt.read(meta.syn_cnt, (bit<32>)meta.flowHash);
-        meta.syn_cnt = meta.syn_cnt + 1;
-        syn_cnt.write((bit<32>)meta.flowHash, meta.syn_cnt);
-    }
-
-    action add_syn_ack_cnt(){
-        hash(meta.flowHash,HashAlgorithm.crc16,16w0,{hdr.ipv4.dstAddr},32w100);
-        syn_ack_cnt.read(meta.syn_ack_cnt, (bit<32>)meta.flowHash);
-        meta.syn_ack_cnt = meta.syn_ack_cnt + 1;
-        syn_ack_cnt.write((bit<32>)meta.flowHash, meta.syn_ack_cnt);
-    }
-
     table ipv4_lpm {
         key = {
             hdr.ipv4.dstAddr: lpm;
@@ -165,26 +142,21 @@ control MyIngress(inout headers hdr,
         default_action = drop;
     }
 
-    apply {
-        bit<1> isDrop = 0;
-        if(hdr.tcp.isValid()){
-            if(hdr.tcp.flags == SYN){
-                add_syn_cnt();
-                bit<10> var1;
-                bit<10> var2;
-
-                syn_cnt.read(var1, (bit<32>)meta.flowHash);
-                syn_ack_cnt.read(var2, (bit<32>)meta.flowHash);
-
-                if(var1 >= var2 + 3){
-                    isDrop = 1;
-                }
-            }else if(hdr.tcp.flags == SYN_ACK){
-                add_syn_ack_cnt();
-            }
+    table block_pkt {
+        key = {
+            hdr.ipv4.dstAddr: exact;
         }
-        if(hdr.ipv4.isValid() && isDrop == 0){
+        actions = {
+            drop;
+            NoAction;
+        }
+        default_action = NoAction;
+    }
+
+    apply {
+        if(hdr.ipv4.isValid()){
             ipv4_lpm.apply();
+            block_pkt.apply();
         }
     }
 }
@@ -196,7 +168,26 @@ control MyIngress(inout headers hdr,
 control MyEgress(inout headers hdr,
                  inout metadata meta,
                  inout standard_metadata_t standard_metadata) {
-                     apply{}
+                    action toCPU(){
+                        clone(CloneType.E2E, 100);
+                        log_msg("******************************************");
+                    }
+                    table send2cpu {
+                        key = {
+                            hdr.ipv4.srcAddr:lpm;
+                        }
+                        actions ={
+                            toCPU;
+                            NoAction;
+                        }
+                        default_action = NoAction();
+                    }
+
+                    apply{
+                        if(hdr.ipv4.isValid() && standard_metadata.instance_type == 0){
+                            send2cpu.apply();
+                        }       
+                    }
 }
 
 /*************************************************************************

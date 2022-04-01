@@ -4,22 +4,7 @@
       "name" : "scalars_0",
       "id" : 0,
       "fields" : [
-        ["tmp", 8, false],
-        ["tmp_0", 32, false],
-        ["tmp_1", 32, false],
-        ["tmp_2", 32, false],
-        ["tmp_3", 32, false],
-        ["tmp_4", 32, false],
-        ["tmp_5", 32, false],
-        ["tmp_6", 32, false],
-        ["tmp_7", 32, false],
-        ["isDrop_0", 1, false],
-        ["var1_0", 10, false],
-        ["var2_0", 10, false],
-        ["userMetadata.flowHash", 10, false],
-        ["userMetadata.syn_cnt", 10, false],
-        ["userMetadata.syn_ack_cnt", 10, false],
-        ["_padding_0", 5, false]
+        ["tmp", 8, false]
       ]
     },
     {
@@ -87,16 +72,6 @@
         ["checksum", 16, false],
         ["urgentPtr", 16, false]
       ]
-    },
-    {
-      "name" : "udp_t",
-      "id" : 5,
-      "fields" : [
-        ["srcPort", 16, false],
-        ["dstPort", 16, false],
-        ["udplength", 16, false],
-        ["checksum", 16, false]
-      ]
     }
   ],
   "headers" : [
@@ -134,20 +109,19 @@
       "header_type" : "tcp_t",
       "metadata" : false,
       "pi_omit" : true
-    },
-    {
-      "name" : "udp",
-      "id" : 5,
-      "header_type" : "udp_t",
-      "metadata" : false,
-      "pi_omit" : true
     }
   ],
   "header_stacks" : [],
   "header_union_types" : [],
   "header_unions" : [],
   "header_union_stacks" : [],
-  "field_lists" : [],
+  "field_lists" : [
+    {
+      "id" : 1,
+      "name" : "fl",
+      "elements" : []
+    }
+  ],
   "errors" : [
     ["NoError", 0],
     ["PacketTooShort", 1],
@@ -245,8 +219,8 @@
                     }
                   ],
                   "source_info" : {
-                    "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-                    "line" : 98,
+                    "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/version2/antiScan.p4",
+                    "line" : 85,
                     "column" : 8,
                     "source_fragment" : "        log_msg(\\\"PROTOCOL {}\\\",{hdr.ipv4.protocol});"
                   }
@@ -261,12 +235,6 @@
               "value" : "0x06",
               "mask" : null,
               "next_state" : "parse_tcp"
-            },
-            {
-              "type" : "hexstr",
-              "value" : "0x11",
-              "mask" : null,
-              "next_state" : "parse_udp"
             },
             {
               "type" : "default",
@@ -305,30 +273,6 @@
             }
           ],
           "transition_key" : []
-        },
-        {
-          "name" : "parse_udp",
-          "id" : 3,
-          "parser_ops" : [
-            {
-              "parameters" : [
-                {
-                  "type" : "regular",
-                  "value" : "udp"
-                }
-              ],
-              "op" : "extract"
-            }
-          ],
-          "transitions" : [
-            {
-              "type" : "default",
-              "value" : null,
-              "mask" : null,
-              "next_state" : null
-            }
-          ],
-          "transition_key" : []
         }
       ]
     }
@@ -339,8 +283,8 @@
       "name" : "deparser",
       "id" : 0,
       "source_info" : {
-        "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-        "line" : 245,
+        "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/version2/antiScan.p4",
+        "line" : 226,
         "column" : 8,
         "source_fragment" : "MyDeparser"
       },
@@ -350,61 +294,14 @@
   ],
   "meter_arrays" : [],
   "counter_arrays" : [],
-  "register_arrays" : [
-    {
-      "name" : "syn_cnt",
-      "id" : 0,
-      "source_info" : {
-        "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-        "line" : 64,
-        "column" : 23,
-        "source_fragment" : "syn_cnt"
-      },
-      "size" : 100,
-      "bitwidth" : 10
-    },
-    {
-      "name" : "syn_ack_cnt",
-      "id" : 1,
-      "source_info" : {
-        "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-        "line" : 65,
-        "column" : 23,
-        "source_fragment" : "syn_ack_cnt"
-      },
-      "size" : 100,
-      "bitwidth" : 10
-    }
-  ],
+  "register_arrays" : [],
   "calculations" : [
     {
       "name" : "calc",
       "id" : 0,
-      "algo" : "crc16",
-      "input" : [
-        {
-          "type" : "field",
-          "value" : ["scalars", "tmp_0"]
-        }
-      ]
-    },
-    {
-      "name" : "calc_0",
-      "id" : 1,
-      "algo" : "crc16",
-      "input" : [
-        {
-          "type" : "field",
-          "value" : ["scalars", "tmp_3"]
-        }
-      ]
-    },
-    {
-      "name" : "calc_1",
-      "id" : 2,
       "source_info" : {
-        "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-        "line" : 218,
+        "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/version2/antiScan.p4",
+        "line" : 199,
         "column" : 1,
         "source_fragment" : "update_checksum( ..."
       },
@@ -460,8 +357,14 @@
   "learn_lists" : [],
   "actions" : [
     {
-      "name" : "MyIngress.drop",
+      "name" : "NoAction",
       "id" : 0,
+      "runtime_data" : [],
+      "primitives" : []
+    },
+    {
+      "name" : "MyIngress.drop",
+      "id" : 1,
       "runtime_data" : [],
       "primitives" : [
         {
@@ -473,8 +376,30 @@
             }
           ],
           "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 133,
+            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/version2/antiScan.p4",
+            "line" : 114,
+            "column" : 8,
+            "source_fragment" : "mark_to_drop(standard_metadata)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "MyIngress.drop",
+      "id" : 2,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "mark_to_drop",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "standard_metadata"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/version2/antiScan.p4",
+            "line" : 114,
             "column" : 8,
             "source_fragment" : "mark_to_drop(standard_metadata)"
           }
@@ -483,7 +408,7 @@
     },
     {
       "name" : "MyIngress.forward",
-      "id" : 1,
+      "id" : 3,
       "runtime_data" : [
         {
           "name" : "dstAddr",
@@ -508,8 +433,8 @@
             }
           ],
           "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 139,
+            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/version2/antiScan.p4",
+            "line" : 120,
             "column" : 8,
             "source_fragment" : "hdr.ethernet.srcAddr = hdr.ethernet.dstAddr"
           }
@@ -527,8 +452,8 @@
             }
           ],
           "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 142,
+            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/version2/antiScan.p4",
+            "line" : 123,
             "column" : 8,
             "source_fragment" : "hdr.ethernet.dstAddr = dstAddr"
           }
@@ -546,8 +471,8 @@
             }
           ],
           "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 145,
+            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/version2/antiScan.p4",
+            "line" : 126,
             "column" : 8,
             "source_fragment" : "standard_metadata.egress_spec = port"
           }
@@ -588,8 +513,8 @@
             }
           ],
           "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 148,
+            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/version2/antiScan.p4",
+            "line" : 129,
             "column" : 8,
             "source_fragment" : "hdr.ipv4.ttl = hdr.ipv4.ttl - 1"
           }
@@ -597,580 +522,53 @@
       ]
     },
     {
-      "name" : "MyIngress.add_syn_cnt",
-      "id" : 2,
-      "runtime_data" : [],
-      "primitives" : [
-        {
-          "op" : "assign",
-          "parameters" : [
-            {
-              "type" : "field",
-              "value" : ["scalars", "tmp_0"]
-            },
-            {
-              "type" : "field",
-              "value" : ["ipv4", "srcAddr"]
-            }
-          ],
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 153,
-            "column" : 53,
-            "source_fragment" : "hdr.ipv4.srcAddr"
-          }
-        },
-        {
-          "op" : "modify_field_with_hash_based_offset",
-          "parameters" : [
-            {
-              "type" : "field",
-              "value" : ["scalars", "userMetadata.flowHash"]
-            },
-            {
-              "type" : "hexstr",
-              "value" : "0x0000"
-            },
-            {
-              "type" : "calculation",
-              "value" : "calc"
-            },
-            {
-              "type" : "hexstr",
-              "value" : "0x00000064"
-            }
-          ],
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 153,
-            "column" : 8,
-            "source_fragment" : "hash(meta.flowHash,HashAlgorithm.crc16,16w0,{hdr.ipv4.srcAddr},32w100)"
-          }
-        },
-        {
-          "op" : "assign",
-          "parameters" : [
-            {
-              "type" : "field",
-              "value" : ["scalars", "tmp_1"]
-            },
-            {
-              "type" : "expression",
-              "value" : {
-                "type" : "expression",
-                "value" : {
-                  "op" : "&",
-                  "left" : {
-                    "type" : "field",
-                    "value" : ["scalars", "userMetadata.flowHash"]
-                  },
-                  "right" : {
-                    "type" : "hexstr",
-                    "value" : "0xffffffff"
-                  }
-                }
-              }
-            }
-          ],
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 154,
-            "column" : 35,
-            "source_fragment" : "(bit<32>)meta.flowHash"
-          }
-        },
-        {
-          "op" : "register_read",
-          "parameters" : [
-            {
-              "type" : "field",
-              "value" : ["scalars", "userMetadata.syn_cnt"]
-            },
-            {
-              "type" : "register_array",
-              "value" : "syn_cnt"
-            },
-            {
-              "type" : "field",
-              "value" : ["scalars", "tmp_1"]
-            }
-          ],
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 154,
-            "column" : 8,
-            "source_fragment" : "syn_cnt.read(meta.syn_cnt, (bit<32>)meta.flowHash)"
-          }
-        },
-        {
-          "op" : "assign",
-          "parameters" : [
-            {
-              "type" : "field",
-              "value" : ["scalars", "userMetadata.syn_cnt"]
-            },
-            {
-              "type" : "expression",
-              "value" : {
-                "type" : "expression",
-                "value" : {
-                  "op" : "&",
-                  "left" : {
-                    "type" : "expression",
-                    "value" : {
-                      "op" : "+",
-                      "left" : {
-                        "type" : "field",
-                        "value" : ["scalars", "userMetadata.syn_cnt"]
-                      },
-                      "right" : {
-                        "type" : "hexstr",
-                        "value" : "0x0001"
-                      }
-                    }
-                  },
-                  "right" : {
-                    "type" : "hexstr",
-                    "value" : "0x03ff"
-                  }
-                }
-              }
-            }
-          ],
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 155,
-            "column" : 8,
-            "source_fragment" : "meta.syn_cnt = meta.syn_cnt + 1"
-          }
-        },
-        {
-          "op" : "assign",
-          "parameters" : [
-            {
-              "type" : "field",
-              "value" : ["scalars", "tmp_2"]
-            },
-            {
-              "type" : "expression",
-              "value" : {
-                "type" : "expression",
-                "value" : {
-                  "op" : "&",
-                  "left" : {
-                    "type" : "field",
-                    "value" : ["scalars", "userMetadata.flowHash"]
-                  },
-                  "right" : {
-                    "type" : "hexstr",
-                    "value" : "0xffffffff"
-                  }
-                }
-              }
-            }
-          ],
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 156,
-            "column" : 22,
-            "source_fragment" : "(bit<32>)meta.flowHash"
-          }
-        },
-        {
-          "op" : "register_write",
-          "parameters" : [
-            {
-              "type" : "register_array",
-              "value" : "syn_cnt"
-            },
-            {
-              "type" : "field",
-              "value" : ["scalars", "tmp_2"]
-            },
-            {
-              "type" : "field",
-              "value" : ["scalars", "userMetadata.syn_cnt"]
-            }
-          ],
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 156,
-            "column" : 8,
-            "source_fragment" : "syn_cnt.write((bit<32>)meta.flowHash, meta.syn_cnt)"
-          }
-        }
-      ]
-    },
-    {
-      "name" : "MyIngress.add_syn_ack_cnt",
-      "id" : 3,
-      "runtime_data" : [],
-      "primitives" : [
-        {
-          "op" : "assign",
-          "parameters" : [
-            {
-              "type" : "field",
-              "value" : ["scalars", "tmp_3"]
-            },
-            {
-              "type" : "field",
-              "value" : ["ipv4", "dstAddr"]
-            }
-          ],
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 160,
-            "column" : 53,
-            "source_fragment" : "hdr.ipv4.dstAddr"
-          }
-        },
-        {
-          "op" : "modify_field_with_hash_based_offset",
-          "parameters" : [
-            {
-              "type" : "field",
-              "value" : ["scalars", "userMetadata.flowHash"]
-            },
-            {
-              "type" : "hexstr",
-              "value" : "0x0000"
-            },
-            {
-              "type" : "calculation",
-              "value" : "calc_0"
-            },
-            {
-              "type" : "hexstr",
-              "value" : "0x00000064"
-            }
-          ],
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 160,
-            "column" : 8,
-            "source_fragment" : "hash(meta.flowHash,HashAlgorithm.crc16,16w0,{hdr.ipv4.dstAddr},32w100)"
-          }
-        },
-        {
-          "op" : "assign",
-          "parameters" : [
-            {
-              "type" : "field",
-              "value" : ["scalars", "tmp_4"]
-            },
-            {
-              "type" : "expression",
-              "value" : {
-                "type" : "expression",
-                "value" : {
-                  "op" : "&",
-                  "left" : {
-                    "type" : "field",
-                    "value" : ["scalars", "userMetadata.flowHash"]
-                  },
-                  "right" : {
-                    "type" : "hexstr",
-                    "value" : "0xffffffff"
-                  }
-                }
-              }
-            }
-          ],
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 161,
-            "column" : 43,
-            "source_fragment" : "(bit<32>)meta.flowHash"
-          }
-        },
-        {
-          "op" : "register_read",
-          "parameters" : [
-            {
-              "type" : "field",
-              "value" : ["scalars", "userMetadata.syn_ack_cnt"]
-            },
-            {
-              "type" : "register_array",
-              "value" : "syn_ack_cnt"
-            },
-            {
-              "type" : "field",
-              "value" : ["scalars", "tmp_4"]
-            }
-          ],
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 161,
-            "column" : 8,
-            "source_fragment" : "syn_ack_cnt.read(meta.syn_ack_cnt, (bit<32>)meta.flowHash)"
-          }
-        },
-        {
-          "op" : "assign",
-          "parameters" : [
-            {
-              "type" : "field",
-              "value" : ["scalars", "userMetadata.syn_ack_cnt"]
-            },
-            {
-              "type" : "expression",
-              "value" : {
-                "type" : "expression",
-                "value" : {
-                  "op" : "&",
-                  "left" : {
-                    "type" : "expression",
-                    "value" : {
-                      "op" : "+",
-                      "left" : {
-                        "type" : "field",
-                        "value" : ["scalars", "userMetadata.syn_ack_cnt"]
-                      },
-                      "right" : {
-                        "type" : "hexstr",
-                        "value" : "0x0001"
-                      }
-                    }
-                  },
-                  "right" : {
-                    "type" : "hexstr",
-                    "value" : "0x03ff"
-                  }
-                }
-              }
-            }
-          ],
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 162,
-            "column" : 8,
-            "source_fragment" : "meta.syn_ack_cnt = meta.syn_ack_cnt + 1"
-          }
-        },
-        {
-          "op" : "assign",
-          "parameters" : [
-            {
-              "type" : "field",
-              "value" : ["scalars", "tmp_5"]
-            },
-            {
-              "type" : "expression",
-              "value" : {
-                "type" : "expression",
-                "value" : {
-                  "op" : "&",
-                  "left" : {
-                    "type" : "field",
-                    "value" : ["scalars", "userMetadata.flowHash"]
-                  },
-                  "right" : {
-                    "type" : "hexstr",
-                    "value" : "0xffffffff"
-                  }
-                }
-              }
-            }
-          ],
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 163,
-            "column" : 26,
-            "source_fragment" : "(bit<32>)meta.flowHash"
-          }
-        },
-        {
-          "op" : "register_write",
-          "parameters" : [
-            {
-              "type" : "register_array",
-              "value" : "syn_ack_cnt"
-            },
-            {
-              "type" : "field",
-              "value" : ["scalars", "tmp_5"]
-            },
-            {
-              "type" : "field",
-              "value" : ["scalars", "userMetadata.syn_ack_cnt"]
-            }
-          ],
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 163,
-            "column" : 8,
-            "source_fragment" : "syn_ack_cnt.write((bit<32>)meta.flowHash, meta.syn_ack_cnt)"
-          }
-        }
-      ]
-    },
-    {
-      "name" : "antiScan190",
+      "name" : "NoAction",
       "id" : 4,
       "runtime_data" : [],
-      "primitives" : [
-        {
-          "op" : "assign",
-          "parameters" : [
-            {
-              "type" : "field",
-              "value" : ["scalars", "isDrop_0"]
-            },
-            {
-              "type" : "hexstr",
-              "value" : "0x01"
-            }
-          ],
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 190,
-            "column" : 20,
-            "source_fragment" : "isDrop = 1"
-          }
-        }
-      ]
+      "primitives" : []
     },
     {
-      "name" : "antiScan186",
+      "name" : "MyEgress.toCPU",
       "id" : 5,
       "runtime_data" : [],
       "primitives" : [
         {
-          "op" : "assign",
+          "op" : "clone_egress_pkt_to_egress",
           "parameters" : [
             {
-              "type" : "field",
-              "value" : ["scalars", "tmp_6"]
-            },
-            {
-              "type" : "expression",
-              "value" : {
-                "type" : "expression",
-                "value" : {
-                  "op" : "&",
-                  "left" : {
-                    "type" : "field",
-                    "value" : ["scalars", "userMetadata.flowHash"]
-                  },
-                  "right" : {
-                    "type" : "hexstr",
-                    "value" : "0xffffffff"
-                  }
-                }
-              }
-            }
-          ],
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 186,
-            "column" : 35,
-            "source_fragment" : "(bit<32>)meta.flowHash"
-          }
-        },
-        {
-          "op" : "register_read",
-          "parameters" : [
-            {
-              "type" : "field",
-              "value" : ["scalars", "var1_0"]
-            },
-            {
-              "type" : "register_array",
-              "value" : "syn_cnt"
-            },
-            {
-              "type" : "field",
-              "value" : ["scalars", "tmp_6"]
-            }
-          ],
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 186,
-            "column" : 16,
-            "source_fragment" : "syn_cnt.read(var1, (bit<32>)meta.flowHash)"
-          }
-        },
-        {
-          "op" : "assign",
-          "parameters" : [
-            {
-              "type" : "field",
-              "value" : ["scalars", "tmp_7"]
-            },
-            {
-              "type" : "expression",
-              "value" : {
-                "type" : "expression",
-                "value" : {
-                  "op" : "&",
-                  "left" : {
-                    "type" : "field",
-                    "value" : ["scalars", "userMetadata.flowHash"]
-                  },
-                  "right" : {
-                    "type" : "hexstr",
-                    "value" : "0xffffffff"
-                  }
-                }
-              }
-            }
-          ],
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 187,
-            "column" : 39,
-            "source_fragment" : "(bit<32>)meta.flowHash"
-          }
-        },
-        {
-          "op" : "register_read",
-          "parameters" : [
-            {
-              "type" : "field",
-              "value" : ["scalars", "var2_0"]
-            },
-            {
-              "type" : "register_array",
-              "value" : "syn_ack_cnt"
-            },
-            {
-              "type" : "field",
-              "value" : ["scalars", "tmp_7"]
-            }
-          ],
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 187,
-            "column" : 16,
-            "source_fragment" : "syn_ack_cnt.read(var2, (bit<32>)meta.flowHash)"
-          }
-        }
-      ]
-    },
-    {
-      "name" : "antiScan179",
-      "id" : 6,
-      "runtime_data" : [],
-      "primitives" : [
-        {
-          "op" : "assign",
-          "parameters" : [
-            {
-              "type" : "field",
-              "value" : ["scalars", "isDrop_0"]
+              "type" : "hexstr",
+              "value" : "0x00000064"
             },
             {
               "type" : "hexstr",
-              "value" : "0x00"
+              "value" : "0x1"
             }
           ],
           "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 179,
-            "column" : 8,
-            "source_fragment" : "bit<1> isDrop = 0;"
+            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/version2/antiScan.p4",
+            "line" : 172,
+            "column" : 24,
+            "source_fragment" : "clone(CloneType.E2E, 100)"
+          }
+        },
+        {
+          "op" : "log_msg",
+          "parameters" : [
+            {
+              "type" : "string",
+              "value" : "******************************************"
+            },
+            {
+              "type" : "parameters_vector",
+              "value" : {
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/version2/antiScan.p4",
+            "line" : 173,
+            "column" : 24,
+            "source_fragment" : "                        log_msg(\\\"******************************************\\\");"
           }
         }
       ]
@@ -1181,164 +579,19 @@
       "name" : "ingress",
       "id" : 0,
       "source_info" : {
-        "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-        "line" : 129,
+        "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/version2/antiScan.p4",
+        "line" : 110,
         "column" : 8,
         "source_fragment" : "MyIngress"
       },
-      "init_table" : "tbl_antiScan179",
+      "init_table" : "node_2",
       "tables" : [
         {
-          "name" : "tbl_antiScan179",
+          "name" : "MyIngress.ipv4_lpm",
           "id" : 0,
           "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 179,
-            "column" : 8,
-            "source_fragment" : "bit<1> isDrop = 0;"
-          },
-          "key" : [],
-          "match_type" : "exact",
-          "type" : "simple",
-          "max_size" : 1024,
-          "with_counters" : false,
-          "support_timeout" : false,
-          "direct_meters" : null,
-          "action_ids" : [6],
-          "actions" : ["antiScan179"],
-          "base_default_next" : "node_3",
-          "next_tables" : {
-            "antiScan179" : "node_3"
-          },
-          "default_entry" : {
-            "action_id" : 6,
-            "action_const" : true,
-            "action_data" : [],
-            "action_entry_const" : true
-          }
-        },
-        {
-          "name" : "tbl_add_syn_cnt",
-          "id" : 1,
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 182,
-            "column" : 16,
-            "source_fragment" : "add_syn_cnt()"
-          },
-          "key" : [],
-          "match_type" : "exact",
-          "type" : "simple",
-          "max_size" : 1024,
-          "with_counters" : false,
-          "support_timeout" : false,
-          "direct_meters" : null,
-          "action_ids" : [2],
-          "actions" : ["MyIngress.add_syn_cnt"],
-          "base_default_next" : "tbl_antiScan186",
-          "next_tables" : {
-            "MyIngress.add_syn_cnt" : "tbl_antiScan186"
-          },
-          "default_entry" : {
-            "action_id" : 2,
-            "action_const" : true,
-            "action_data" : [],
-            "action_entry_const" : true
-          }
-        },
-        {
-          "name" : "tbl_antiScan186",
-          "id" : 2,
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 186,
-            "column" : 16,
-            "source_fragment" : "syn_cnt.read(var1, (bit<32>)meta.flowHash); ..."
-          },
-          "key" : [],
-          "match_type" : "exact",
-          "type" : "simple",
-          "max_size" : 1024,
-          "with_counters" : false,
-          "support_timeout" : false,
-          "direct_meters" : null,
-          "action_ids" : [5],
-          "actions" : ["antiScan186"],
-          "base_default_next" : "node_7",
-          "next_tables" : {
-            "antiScan186" : "node_7"
-          },
-          "default_entry" : {
-            "action_id" : 5,
-            "action_const" : true,
-            "action_data" : [],
-            "action_entry_const" : true
-          }
-        },
-        {
-          "name" : "tbl_antiScan190",
-          "id" : 3,
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 190,
-            "column" : 27,
-            "source_fragment" : "="
-          },
-          "key" : [],
-          "match_type" : "exact",
-          "type" : "simple",
-          "max_size" : 1024,
-          "with_counters" : false,
-          "support_timeout" : false,
-          "direct_meters" : null,
-          "action_ids" : [4],
-          "actions" : ["antiScan190"],
-          "base_default_next" : "node_11",
-          "next_tables" : {
-            "antiScan190" : "node_11"
-          },
-          "default_entry" : {
-            "action_id" : 4,
-            "action_const" : true,
-            "action_data" : [],
-            "action_entry_const" : true
-          }
-        },
-        {
-          "name" : "tbl_add_syn_ack_cnt",
-          "id" : 4,
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 193,
-            "column" : 16,
-            "source_fragment" : "add_syn_ack_cnt()"
-          },
-          "key" : [],
-          "match_type" : "exact",
-          "type" : "simple",
-          "max_size" : 1024,
-          "with_counters" : false,
-          "support_timeout" : false,
-          "direct_meters" : null,
-          "action_ids" : [3],
-          "actions" : ["MyIngress.add_syn_ack_cnt"],
-          "base_default_next" : "node_11",
-          "next_tables" : {
-            "MyIngress.add_syn_ack_cnt" : "node_11"
-          },
-          "default_entry" : {
-            "action_id" : 3,
-            "action_const" : true,
-            "action_data" : [],
-            "action_entry_const" : true
-          }
-        },
-        {
-          "name" : "MyIngress.ipv4_lpm",
-          "id" : 5,
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 166,
+            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/version2/antiScan.p4",
+            "line" : 133,
             "column" : 10,
             "source_fragment" : "ipv4_lpm"
           },
@@ -1356,12 +609,49 @@
           "with_counters" : false,
           "support_timeout" : false,
           "direct_meters" : null,
-          "action_ids" : [1, 0],
+          "action_ids" : [3, 1],
           "actions" : ["MyIngress.forward", "MyIngress.drop"],
+          "base_default_next" : "MyIngress.block_pkt",
+          "next_tables" : {
+            "MyIngress.forward" : "MyIngress.block_pkt",
+            "MyIngress.drop" : "MyIngress.block_pkt"
+          },
+          "default_entry" : {
+            "action_id" : 1,
+            "action_const" : false,
+            "action_data" : [],
+            "action_entry_const" : false
+          }
+        },
+        {
+          "name" : "MyIngress.block_pkt",
+          "id" : 1,
+          "source_info" : {
+            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/version2/antiScan.p4",
+            "line" : 145,
+            "column" : 10,
+            "source_fragment" : "block_pkt"
+          },
+          "key" : [
+            {
+              "match_type" : "exact",
+              "name" : "hdr.ipv4.dstAddr",
+              "target" : ["ipv4", "dstAddr"],
+              "mask" : null
+            }
+          ],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [2, 0],
+          "actions" : ["MyIngress.drop", "NoAction"],
           "base_default_next" : null,
           "next_tables" : {
-            "MyIngress.forward" : null,
-            "MyIngress.drop" : null
+            "MyIngress.drop" : null,
+            "NoAction" : null
           },
           "default_entry" : {
             "action_id" : 0,
@@ -1374,13 +664,13 @@
       "action_profiles" : [],
       "conditionals" : [
         {
-          "name" : "node_3",
+          "name" : "node_2",
           "id" : 0,
           "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 180,
+            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/version2/antiScan.p4",
+            "line" : 157,
             "column" : 11,
-            "source_fragment" : "hdr.tcp.isValid()"
+            "source_fragment" : "hdr.ipv4.isValid()"
           },
           "expression" : {
             "type" : "expression",
@@ -1389,119 +679,74 @@
               "left" : null,
               "right" : {
                 "type" : "field",
-                "value" : ["tcp", "$valid$"]
+                "value" : ["ipv4", "$valid$"]
               }
             }
           },
-          "true_next" : "node_4",
-          "false_next" : "node_11"
-        },
+          "false_next" : null,
+          "true_next" : "MyIngress.ipv4_lpm"
+        }
+      ]
+    },
+    {
+      "name" : "egress",
+      "id" : 1,
+      "source_info" : {
+        "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/version2/antiScan.p4",
+        "line" : 168,
+        "column" : 8,
+        "source_fragment" : "MyEgress"
+      },
+      "init_table" : "node_7",
+      "tables" : [
         {
-          "name" : "node_4",
-          "id" : 1,
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 181,
-            "column" : 15,
-            "source_fragment" : "hdr.tcp.flags == SYN"
-          },
-          "expression" : {
-            "type" : "expression",
-            "value" : {
-              "op" : "==",
-              "left" : {
-                "type" : "field",
-                "value" : ["tcp", "flags"]
-              },
-              "right" : {
-                "type" : "hexstr",
-                "value" : "0x02"
-              }
-            }
-          },
-          "true_next" : "tbl_add_syn_cnt",
-          "false_next" : "node_9"
-        },
-        {
-          "name" : "node_7",
+          "name" : "MyEgress.send2cpu",
           "id" : 2,
           "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 189,
-            "column" : 19,
-            "source_fragment" : "var1 >= var2 + 3"
+            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/version2/antiScan.p4",
+            "line" : 175,
+            "column" : 26,
+            "source_fragment" : "send2cpu"
           },
-          "expression" : {
-            "type" : "expression",
-            "value" : {
-              "op" : ">=",
-              "left" : {
-                "type" : "field",
-                "value" : ["scalars", "var1_0"]
-              },
-              "right" : {
-                "type" : "expression",
-                "value" : {
-                  "op" : "&",
-                  "left" : {
-                    "type" : "expression",
-                    "value" : {
-                      "op" : "+",
-                      "left" : {
-                        "type" : "field",
-                        "value" : ["scalars", "var2_0"]
-                      },
-                      "right" : {
-                        "type" : "hexstr",
-                        "value" : "0x0003"
-                      }
-                    }
-                  },
-                  "right" : {
-                    "type" : "hexstr",
-                    "value" : "0x03ff"
-                  }
-                }
-              }
+          "key" : [
+            {
+              "match_type" : "lpm",
+              "name" : "hdr.ipv4.srcAddr",
+              "target" : ["ipv4", "srcAddr"],
+              "mask" : null
             }
+          ],
+          "match_type" : "lpm",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [5, 4],
+          "actions" : ["MyEgress.toCPU", "NoAction"],
+          "base_default_next" : null,
+          "next_tables" : {
+            "MyEgress.toCPU" : null,
+            "NoAction" : null
           },
-          "true_next" : "tbl_antiScan190",
-          "false_next" : "node_11"
-        },
+          "default_entry" : {
+            "action_id" : 4,
+            "action_const" : false,
+            "action_data" : [],
+            "action_entry_const" : false
+          }
+        }
+      ],
+      "action_profiles" : [],
+      "conditionals" : [
         {
-          "name" : "node_9",
-          "id" : 3,
+          "name" : "node_7",
+          "id" : 1,
           "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 192,
-            "column" : 21,
-            "source_fragment" : "hdr.tcp.flags == SYN_ACK"
-          },
-          "expression" : {
-            "type" : "expression",
-            "value" : {
-              "op" : "==",
-              "left" : {
-                "type" : "field",
-                "value" : ["tcp", "flags"]
-              },
-              "right" : {
-                "type" : "hexstr",
-                "value" : "0x12"
-              }
-            }
-          },
-          "true_next" : "tbl_add_syn_ack_cnt",
-          "false_next" : "node_11"
-        },
-        {
-          "name" : "node_11",
-          "id" : 4,
-          "source_info" : {
-            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-            "line" : 196,
-            "column" : 11,
-            "source_fragment" : "hdr.ipv4.isValid() && isDrop == 0"
+            "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/version2/antiScan.p4",
+            "line" : 187,
+            "column" : 27,
+            "source_fragment" : "hdr.ipv4.isValid() && standard_metadata.instance_type == 0"
           },
           "expression" : {
             "type" : "expression",
@@ -1524,34 +769,20 @@
                   "op" : "==",
                   "left" : {
                     "type" : "field",
-                    "value" : ["scalars", "isDrop_0"]
+                    "value" : ["standard_metadata", "instance_type"]
                   },
                   "right" : {
                     "type" : "hexstr",
-                    "value" : "0x00"
+                    "value" : "0x00000000"
                   }
                 }
               }
             }
           },
           "false_next" : null,
-          "true_next" : "MyIngress.ipv4_lpm"
+          "true_next" : "MyEgress.send2cpu"
         }
       ]
-    },
-    {
-      "name" : "egress",
-      "id" : 1,
-      "source_info" : {
-        "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-        "line" : 206,
-        "column" : 8,
-        "source_fragment" : "MyEgress"
-      },
-      "init_table" : null,
-      "tables" : [],
-      "action_profiles" : [],
-      "conditionals" : []
     }
   ],
   "checksums" : [
@@ -1559,14 +790,14 @@
       "name" : "cksum",
       "id" : 0,
       "source_info" : {
-        "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4",
-        "line" : 218,
+        "filename" : "/home/parallels/Desktop/minicode/p4-15-antiScan/version2/antiScan.p4",
+        "line" : 199,
         "column" : 1,
         "source_fragment" : "update_checksum( ..."
       },
       "target" : ["ipv4", "hdrChecksum"],
       "type" : "generic",
-      "calculation" : "calc_1",
+      "calculation" : "calc",
       "verify" : false,
       "update" : true,
       "if_cond" : {
@@ -1622,7 +853,7 @@
       ["standard_metadata", "priority"]
     ]
   ],
-  "program" : "/home/parallels/Desktop/minicode/p4-15-antiScan/antiScan.p4i",
+  "program" : "/home/parallels/Desktop/minicode/p4-15-antiScan/version2/antiScan.p4i",
   "__meta__" : {
     "version" : [2, 23],
     "compiler" : "https://github.com/p4lang/p4c"
